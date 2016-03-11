@@ -1,0 +1,39 @@
+{
+  "name": "bithub-admin-client",
+  "version": "0.1.0",
+  "description": "",
+  "main": "bithub-social.js",
+  "scripts": {
+    "test": "./node_modules/.bin/testee --browsers firefox tests.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bithub-embed": "^0.1.0",
+    "bootstrap": "3.3.0",
+    "can": "2.3.18",
+    "chart.js": "1.0.2",
+    "font-awesome": "4.2.0",
+    "jquery": "2.2.1",
+    "jquery.payment": "1.2.3",
+    "js-cookie": "^2.1.0",
+    "lodash-amd": "3.10.1",
+    "moment": "2.10.3",
+    "randomcolor": "0.4.3",
+    "selectize": "0.12.0",
+    "steal": "0.15.0",
+    "system-json": "^0.1.0"
+  },
+  "devDependencies": {
+    "steal-tools": "0.15.0",
+    "funcunit": "3.1.0-pre.1",
+    "steal-qunit": "0.1.1",
+    "testee": "0.2.5"
+  },
+  "system": {
+    "npmAlgorithm": "flat",
+    "configDependencies": [
+      "live-reload"
+    ]
+  }
+}

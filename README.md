@@ -1,2 +1,2 @@
-# www-client
-The desktop and mobile web client for bithub.com.
+(develop.bithub) client application [![Build Status](https://travis-ci.org/bithubapp/bithub-admin.svg?branch=develop)](https://travis-ci.org/bithubapp/bithub-admin)
+==============
