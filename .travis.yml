@@ -12,7 +12,7 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 deploy:
   - provider: script
-    script: deploy/develop-deploy.sh
+    script: deploy/deploy-develop.sh
     skip_cleanup: true
     on:
       branch: develop
