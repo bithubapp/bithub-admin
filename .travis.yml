@@ -12,12 +12,12 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 deploy:
   - provider: script
-    script: deploy/develop-deploy.sh
+    script: ./.travis/deploy-develop.sh
     skip_cleanup: true
     on:
       branch: develop
   - provider: script
-    script: deploy/staging-deploy.sh
+    script: ./.travis/deploy-staging.sh
     skip_cleanup: true
     on:
       branch: staging
