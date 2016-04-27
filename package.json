@@ -11,7 +11,7 @@
   "dependencies": {
     "bithub-embed": "^0.1.0",
     "bootstrap": "3.3.0",
-    "can": "2.3.18",
+    "can": "^2.3.0",
     "chart.js": "1.0.2",
     "font-awesome": "4.2.0",
     "jquery": "2.2.1",
