@@ -19,7 +19,7 @@ export default can.Control.extend({
 	receive : function(el, ev){
 		var event = ev.originalEvent;
 		var type = event.data.type;
-		if(event.origin !== 'http://' + EMBED_ENDPOINT){
+		if(event.origin !== 'https://' + EMBED_ENDPOINT){
 			return;
 		} else {
 			if(this.options.handlers[type]){
@@ -39,7 +39,7 @@ export default can.Control.extend({
 				frame.postMessage({
 					type: type,
 					payload: preparePayload(payload)
-				}, 'http://' + EMBED_ENDPOINT);
+				}, 'https://' + EMBED_ENDPOINT);
 			} catch (e) {
 				console.log( e );
 			}
