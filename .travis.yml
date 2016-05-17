@@ -13,19 +13,19 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 deploy:
   - provider: script
-    script: ./.travis/deploy-develop.sh
+    script: ./.travis/deploy-production.sh
     skip_cleanup: true
-    on:
-      branch: develop
+    on: 
+      branch: production
   - provider: script
     script: ./.travis/deploy-staging.sh
     skip_cleanup: true
     on:
       branch: staging
   - provider: script
-    script: ./.travis/deploy-production.sh
+    script: ./.travis/deploy-develop.sh
     skip_cleanup: true
-    on: 
-      branch: production
+    on:
+      branch: develop
 notifications:
   slack: bitovi:a6EZ5xpLzrpMgCYyvKwfkmN5
