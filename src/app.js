@@ -2,8 +2,6 @@ import DefineMap from 'can-define/map/map';
 import route from 'can-route-pushstate';
 
 const AppViewModel = DefineMap.extend({
-	seal: false
-},{
 	message: {
 		value: 'Hello World!',
 		serialize: false
@@ -11,7 +9,11 @@ const AppViewModel = DefineMap.extend({
 	title: {
 		value: 'bithub-admin',
 		serialize: false
-	}
+	},
+	page: 'string',
+	slug: 'string',
+	action: 'string',
+	route: 'string'
 });
 
 route(':page', {page: 'home'});
