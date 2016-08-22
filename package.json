@@ -33,12 +33,19 @@
       "live-reload",
       "node_modules/can-zone/register"
     ],
-    "npmAlgorithm": "flat"
+    "npmAlgorithm": "flat",
+    "map": {
+      "chai": "chai/chai"
+    }
   },
   "license": "ISC",
   "dependencies": {
-    "can": "^2.3.16",
+    "can-component": "^3.0.0-pre.15",
     "can-connect": "^0.5.0",
+    "can-control": "^3.0.0-pre.7",
+    "can-define": "^0.7.21",
+    "can-fixture": "^0.1.4",
+    "can-validate": "^0.9.2",
     "can-zone": "^0.5.0",
     "done-autorender": "^0.8.0",
     "done-component": "^0.4.0",
@@ -46,14 +53,17 @@
     "done-serve": "^0.2.0",
     "generator-donejs": "^0.9.0",
     "jquery": "~2.2.1",
-    "steal": "^0.16.0"
+    "steal": "^0.16.0",
+    "validate.js": "^0.10.0"
   },
   "devDependencies": {
     "can-fixture": "^0.1.2",
+    "chai": "^3.5.0",
     "documentjs": "^0.4.2",
     "donejs-cli": "^0.9.4",
     "donejs-deploy": "^0.4.0",
     "funcunit": "~3.0.0",
+    "steal-mocha": "0.0.3",
     "steal-qunit": "^0.1.1",
     "steal-tools": "^0.16.0",
     "testee": "^0.2.4",
@@ -66,8 +76,8 @@
       "jasmine"
     ],
     "rules": {
-        "import/no-extraneous-dependencies": 0,
-        "prefer-arrow-callback": 0
+      "import/no-extraneous-dependencies": 0,
+      "prefer-arrow-callback": 0
     },
     "globals": [
       "steal"
