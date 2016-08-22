@@ -8,7 +8,7 @@
     "test": "testee src/test.html --browsers firefox --reporter Spec",
     "lint": "xo",
     "start": "done-serve --port 8080",
-    "develop": "done-serve --develop --port 8080",
+    "develop": "done-serve --static --develop --port 8080",
     "document": "documentjs",
     "build": "node bin/build",
     "preflight": "npm run lint && npm test && npm run build",
