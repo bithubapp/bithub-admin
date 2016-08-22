@@ -1,8 +1,10 @@
-import Map from 'can-define/map/map';
+import DefinedMap from 'can-define/map/map';
 import route from 'can-route';
 import 'can-route-pushstate';
 
-const AppViewModel = Map.extend({
+const AppViewModel = DefinedMap.extend('AppViewModel',{
+	seal: false
+},{
 	define: {
 		message: {
 			value: 'Hello World!',
