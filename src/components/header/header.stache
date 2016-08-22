@@ -1,0 +1,11 @@
+<div class="bithub-header__logo height-100">
+    <img src="/images/logo.png" alt="BitHub Logo" class="height-100" />
+</div>
+
+<div class="bithub-header__dropdowns">
+    <can-import from="bithub-admin/components/header-menu/" />
+
+    <bithub-header-menu title="Organization Name" align-children="left" />
+    <bithub-header-menu title="Your Hub Name" align-children="left" />
+    <bithub-header-menu class="bithub-header-menu__account" title="Your Name" align-children="right" />
+</div>

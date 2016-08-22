@@ -1,12 +1,15 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <body>
-    <can-import from="bithub-admin/styles.less!" />
+    <can-import from="bithub-admin/index.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
 
-    <h1>{{message}}</h1>
+    <can-import from="bithub-admin/components/header/" />
+
+    <bithub-header></bithub-header>
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}

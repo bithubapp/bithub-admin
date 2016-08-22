@@ -1,0 +1,20 @@
+@import "../../styles/colors.less";
+@import "../../styles/dimensions.less";
+
+bithub-header {
+	height: @app-header-height;
+	background-color: black;
+	
+	.bithub-header__logo {
+		display: inline-block;
+		width: @logo-width;
+		vertical-align: middle;
+		background-color: @bh-red;
+	}
+	.bithub-header__dropdowns {
+		width: ~"calc(100% - "@logo-width~" - 5px)";
+		display: inline-flex;
+		vertical-align: middle;
+		color: @bh-medium-gray;
+	}
+}
