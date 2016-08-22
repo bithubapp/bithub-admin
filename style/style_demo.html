@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BitHub Administration</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://use.fontawesome.com/25ea35044f.js"></script>
+    <script src="/node_modules/steal/steal.js" data-main="can/view/autorender/"></script>
+</head>
+<body>
+
+<script type='text/stache' can-autorender id='main'>
+    <can-import from="style/index.less!" />
+</script>
+
+<div class="app-header">
+    <div class="app-header__logo height-100">
+        <img src="/images/logo.png" alt="BitHub Logo" class="height-100" />
+    </div>
+
+    <div class="app-header__dropdowns">
+        <span class="app-header__dropdown">Organization Name</span>
+        <span class="app-header__dropdown">Your Hub Name</span>
+        <span class="app-header__dropdown app-header__dropdown--user">Your Name</span>
+    </div>
+</div>
+
+<div class="hub-header">
+    <div class="hub-header__content">
+        <span class="hub-header__name">My Hub Name</span >
+
+        <div class="hub-header__tabs">
+            <span class="hub-header__tab">Moderate</span>
+            <span class="hub-header__tab">Publish</span>
+            <span class="hub-header__tab">Analytics</span>
+        </div>
+
+        <div class="hub-header__add-content">
+            <!-- span required for vertical alignment -->
+            <span>Add/Edit Content</span>
+        </div>
+    </div>
+</div>
+
+<div class="hub-controls">
+
+</div>
+
+<div class="hub-frame">
+
+</div>
+
+</body>
+</html>
