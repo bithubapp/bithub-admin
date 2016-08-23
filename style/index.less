@@ -30,7 +30,7 @@ body {
 	}
 	.app-header__dropdown::after {
 		content: "▼";
-		font-size: 6pt;
+		font-size: 40%;
 		margin-left: .5em;
 		vertical-align: middle;
 	}
@@ -44,6 +44,7 @@ body {
 	height: @hub-header-height;
 	background-color: white;
 	color: @bh-medium-gray;
+	white-space: nowrap;
 
 	.hub-header__content {
 		display: flex;
@@ -56,6 +57,7 @@ body {
 
 	.hub-header__name {
 		font-size: @font-size-large;
+		margin-right: 1em;
 	}
 	.hub-header__name::after {
 		font-size: @font-size-normal;
@@ -70,6 +72,25 @@ body {
 	.hub-header__tab {
 		padding: 0 25px;
 		border-right: 1px solid @bh-light-gray;
+	}
+	.hub-header__tab--selected {
+		display: inline-block;
+		height: @hub-header-height;
+		line-height: @hub-header-height;
+		background: @bh-blue;
+		color: white;
+		position:relative;
+	}
+	.hub-header__tab--selected::after {
+		color: @bh-blue;
+		position:absolute;
+		content: "▼";
+		// need to match, based on icon size
+		line-height:15px;
+		bottom:-15px;
+		left: 0;
+		right: 0;
+		text-align: center;
 	}
 	.hub-header__tab:last-child {
 		border-right: 0;
@@ -99,8 +120,82 @@ body {
 }
 
 .hub-controls {
+	display: flex;
+	position: relative;
+	height: @hub-controls-height;
 	width: @hub-width;
-	margin: 0 auto;
+	margin:15px auto 0 auto;
+	border-bottom: 2px solid white;
+	color: @bh-dark-gray;
+
+	.hub-controls__tabs {
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.hub-controls__tab {
+		display: inline-block;
+		padding: 0 1em;
+	}
+
+	.hub-controls__tab:last-child {
+		margin-right: 0;
+	}
+
+	.hub-controls__tab--selected {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		background-color: white;
+		color: @bh-blue;
+
+		.fa:after {
+			content: "\00a0"
+		}
+	}
+
+	.hub-controls__dropdowns {
+		display: inline-flex;
+		align-items: flex-end;
+		margin-left: auto;
+		font-size: @font-size-small;
+	}
+
+	.hub-controls__dropdown {
+		background-color: white;
+		margin-right: 5px;
+		text-align: center;
+		line-height: @hub-controls-dropdown-height;
+		height: @hub-controls-dropdown-height;
+		width: @hub-controls-dropdown-width;
+	}
+
+	.hub-controls__dropdown:last-child {
+		margin-right: 0;
+	}
+
+	.hub-controls__dropdown::after {
+		content: "▼";
+		font-size: 40%;
+		margin-left: .5em;
+		vertical-align: middle;
+	}
+
+	.hub-controls__moderation-settings {
+		position: absolute;
+		right: 0;
+
+		> span {
+			vertical-align: middle;
+		}
+	}
+
+	.hub-controls__moderation-settings::before {
+		font-family: FontAwesome;
+		content: "\f013";
+		vertical-align: middle;
+	}
 }
 
 .hub-frame {
