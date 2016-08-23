@@ -30,7 +30,7 @@
         <span class="hub-header__name">My Hub Name</span >
 
         <div class="hub-header__tabs">
-            <span class="hub-header__tab">Moderate</span>
+            <span class="hub-header__tab hub-header__tab--selected">Moderate</span>
             <span class="hub-header__tab">Publish</span>
             <span class="hub-header__tab">Analytics</span>
         </div>
@@ -43,7 +43,34 @@
 </div>
 
 <div class="hub-controls">
+    <div class="hub-controls__tabs">
+        <div class="hub-controls__tab hub-controls__tab--selected">
+            <i class="fa fa-inbox" aria-hidden="true"></i> Inbox (42)
+        </div>
+        <div class="hub-controls__tab">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i> Approved (350)
+        </div>
+        <div class="hub-controls__tab">
+            <i class="fa fa-star" aria-hidden="true"></i> Starred (3)
+        </div>
+        <div class="hub-controls__tab">
+            Deleted
+        </div>
+    </div>
 
+    <div class="hub-controls__dropdowns">
+        <div class="hub-controls__dropdown">
+            View All Services
+        </div>
+        <div class="hub-controls__dropdown">
+            Newest To Oldest
+        </div>
+    </div>
+
+    <div class="hub-controls__moderation-settings">
+        <!-- span required for vertical alignment -->
+        <span>Moderation Settings</span>
+    </div>
 </div>
 
 <div class="hub-frame">
