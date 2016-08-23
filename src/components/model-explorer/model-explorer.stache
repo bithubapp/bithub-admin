@@ -12,7 +12,7 @@
 		<label>Model
 		    <select class="col-xs-5 no-gutter" {($value)}="selectedModel">
 				{{#each modelOptions}}
-					<option {$value}="value" {{#if selectedModel}}selected{{/if}}>{{label}}</option>
+					<option {$value}="value" {{#is value selectedModel}}selected{{/is}}>{{label}}</option>
 				{{/each}}
 			</select>
 		</label>
@@ -22,7 +22,7 @@
 					<label>Method
 					    <select class="col-xs-5 no-gutter" {($value)}="selectedMethod">
 							{{#each modelMethods}}
-								<option {$value}="value" {{#if selectedMethod}}selected{{/if}}>{{label}}</option>
+								<option {$value}="value" {{#is value selectedMethod}}selected{{/is}}>{{label}}</option>
 							{{/each}}
 						</select>
 					</label>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             {{/if}}
-			<textarea value="{paramsString}"></textarea>
+			<textarea {$value}="paramsString" ($change)="updateProp('paramsString',@element.value)"></textarea>
             <button type="button" class="btn btn-primary" can-click="submit">Submit</button>
             <label class="control-label">
 				<input

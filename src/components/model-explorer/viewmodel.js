@@ -4,6 +4,9 @@ import DefineList from 'can-define/list/list';
 const Errors = DefineMap.extend({
 	form: {
 		Value: Array
+	},
+	params: {
+		Value: Array
 	}
 });
 
@@ -255,7 +258,10 @@ export default DefineMap.extend({
     },
 	toggleProp: function (propName) {
 		const val = this[propName];
-		this[propName] = !val;
+		this.updateProp(propName, !val);
+	},
+	updateProp: function (propName, val) {
+		this[propName] = val;
 	},
 
     /**
