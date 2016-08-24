@@ -4,7 +4,6 @@ import { ViewModel } from './header-menu';
 
 let assert = chai.assert;
 
-// ViewModel unit tests
 describe('bithub-admin/components/header-menu', function(){
   it('Has message', function(){
     var vm = new ViewModel();

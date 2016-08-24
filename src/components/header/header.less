@@ -17,4 +17,21 @@ bithub-header {
 		vertical-align: middle;
 		color: @bh-medium-gray;
 	}
+	
+	.bithub-dropdown-menu {
+		padding: 0 1em;
+		vertical-align: middle;
+	}
+
+	.bithub-dropdown-menu::after {
+		content: "▼";
+		font-size: 6pt;
+		margin-left: .5em;
+		vertical-align: middle;
+	}
+	
+	.bithub-dropdown-menu__account {
+		color: @bh-blue;
+		margin-left: auto;
+	}
 }

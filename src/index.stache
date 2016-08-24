@@ -6,10 +6,10 @@
   <body>
     <can-import from="bithub-admin/index.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
-
+    <can-import from="bithub-admin/plugins/attr-is" />
     <can-import from="bithub-admin/components/header/" />
 
-    <bithub-header></bithub-header>
+    <bithub-header />
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}

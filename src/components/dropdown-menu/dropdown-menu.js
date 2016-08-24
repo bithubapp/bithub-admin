@@ -1,7 +1,6 @@
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
-import './header-menu.less';
-import template from './header-menu.stache';
+import template from './dropdown-menu.stache';
 
 export const ViewModel = DefineMap.extend({
   userMenu: {
@@ -11,7 +10,7 @@ export const ViewModel = DefineMap.extend({
 });
 
 export default Component.extend({
-  tag: 'bithub-header-menu',
+  tag: 'bithub-dropdown-menu',
   ViewModel: ViewModel,
   template
 });

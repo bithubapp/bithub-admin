@@ -2,6 +2,8 @@ import DefineMap from 'can-define/map/map';
 import route from 'can-route';
 import 'can-route-pushstate';
 
+import 'bithub-admin/plugins/attr-is';
+
 const AppViewModel = DefineMap.extend({
 	message: {
 		value: 'Hello World!',

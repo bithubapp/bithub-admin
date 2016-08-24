@@ -3,9 +3,10 @@
 </div>
 
 <div class="bithub-header__dropdowns">
-    <can-import from="bithub-admin/components/header-menu/" />
+    <can-import from="bithub-admin/components/dropdown-menu/" />
 
-    <bithub-header-menu title="Organization Name" align-children="left" />
-    <bithub-header-menu title="Your Hub Name" align-children="left" />
-    <bithub-header-menu class="bithub-header-menu__account" title="Your Name" align-children="right" />
+    <div is="bithub-dropdown-menu" title="Organization Name"></div>
+    
+    <bithub-dropdown-menu title="Your Hub Name" align-children="left" />
+    <bithub-dropdown-menu class="bithub-dropdown-menu__account" title="Your Name" align-children="right" />
 </div>
