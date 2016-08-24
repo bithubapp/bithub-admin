@@ -1,16 +1,8 @@
-@import "styles/colors.less";
-@import "styles/dimensions.less";
-
-body {
-	font-family: 'Source Sans Pro Regular', 'Source Sans Pro';
-	font-size: @font-size-normal;
-	background-color: @bh-light-gray;
-	margin: 0;
+hub-header {
+	display: block;
 }
 
-@import "components/components.less";
-
-.hub-header {
+hub-header, .hub-header {
 	height: @hub-header-height;
 	background-color: white;
 	color: @bh-medium-gray;
@@ -45,7 +37,7 @@ body {
 		border-right: 0;
 	}
 
-	.hub-header__add-content {
+	button.hub-header__add-content {
 		> span {
 			vertical-align: middle;
 		}
@@ -66,14 +58,4 @@ body {
 		vertical-align: middle;
 		color: @bh-blue;
 	}
-}
-
-.hub-controls {
-	width: @hub-width;
-	margin: 0 auto;
-}
-
-.hub-frame {
-	width: @hub-width;
-	margin: 0 auto;
 }

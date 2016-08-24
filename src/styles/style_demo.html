@@ -5,13 +5,24 @@
     <title>BitHub Administration</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <script src="https://use.fontawesome.com/25ea35044f.js"></script>
-    <script src="/node_modules/steal/steal.js" data-main="can/view/autorender/"></script>
+    <script src="/node_modules/steal/steal.js" data-main="can-view-autorender"></script>
 </head>
 <body>
 
 <script type='text/stache' can-autorender id='main'>
-    <can-import from="style/index.less!" />
+    <can-import from="src/styles/index.less!" />
 </script>
+<div class="app-header">
+    <div class="app-header__logo height-100">
+        <img src="/images/logo.png" alt="BitHub Logo" class="height-100" />
+    </div>
+
+    <div class="app-header__dropdowns">
+        <span class="app-header__dropdown">Organization Name</span>
+        <span class="app-header__dropdown">Your Hub Name</span>
+        <span class="app-header__dropdown app-header__dropdown__account">Your Name</span>
+    </div>
+</div>
 
 <div class="hub-header">
     <div class="hub-header__content">

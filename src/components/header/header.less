@@ -1,36 +1,36 @@
 @import "../../styles/colors.less";
 @import "../../styles/dimensions.less";
 
-bithub-header {
+app-header, .app-header {
 	height: @app-header-height;
 	background-color: black;
-	
-	.bithub-header__logo {
+
+	.app-header__logo {
 		display: inline-block;
 		width: @logo-width;
 		vertical-align: middle;
 		background-color: @bh-red;
 	}
-	.bithub-header__dropdowns {
+	.app-header__dropdowns {
 		width: ~"calc(100% - "@logo-width~" - 5px)";
 		display: inline-flex;
 		vertical-align: middle;
 		color: @bh-medium-gray;
 	}
-	
-	.bithub-dropdown-menu {
+
+	.app-header__dropdown {
 		padding: 0 1em;
 		vertical-align: middle;
 	}
 
-	.bithub-dropdown-menu::after {
+	.app-header__dropdown::after {
 		content: "▼";
 		font-size: 6pt;
 		margin-left: .5em;
 		vertical-align: middle;
 	}
-	
-	.bithub-dropdown-menu__account {
+
+	.app-header__dropdown__account {
 		color: @bh-blue;
 		margin-left: auto;
 	}

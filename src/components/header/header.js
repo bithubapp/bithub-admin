@@ -15,15 +15,15 @@ const dropdownConfigs = {
     action: function() {}
   }, {
     title: 'Team Members',
-    icon: '', 
+    icon: '',
     seperator: false,
     action: function() {}
   }, {
     title: '',
-    icon: '', 
+    icon: '',
     seperator: true,
     action: null
-  },{ 
+  },{
     // this object is replaced
     // with the items that come
     // from the organizations model
@@ -39,12 +39,12 @@ const dropdownConfigs = {
     // from the organizations model
   }, {
     title: '',
-    icon: '', 
+    icon: '',
     seperator: true,
     action: null
   }, {
     title: 'Add a Hub',
-    icon: '', 
+    icon: '',
     seperator: false,
     action: function() {}
   }],
@@ -68,7 +68,7 @@ export const ViewModel = DefineMap.extend({
 });
 
 export default Component.extend({
-  tag: 'bithub-header',
+  tag: 'app-header',
   ViewModel: ViewModel,
   template
 });

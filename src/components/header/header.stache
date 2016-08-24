@@ -1,12 +1,13 @@
-<div class="bithub-header__logo height-100">
+<div class="app-header__logo height-100">
     <img src="/images/logo.png" alt="BitHub Logo" class="height-100" />
 </div>
 
-<div class="bithub-header__dropdowns">
+<div class="app-header__dropdowns">
     <can-import from="bithub-admin/components/dropdown-menu/" />
 
-    <div is="bithub-dropdown-menu" title="Organization Name"></div>
-    
-    <bithub-dropdown-menu title="Your Hub Name" align-children="left" />
-    <bithub-dropdown-menu class="bithub-dropdown-menu__account" title="Your Name" align-children="right" />
+    <div is="app-header__dropdown" title="Organization Name"></div>
+
+    <bithub-dropdown-menu class="app-header__dropdown" title="Organisation Name" align-children="left" />
+    <bithub-dropdown-menu class="app-header__dropdown" title="Your Hub Name" align-children="left" />
+    <bithub-dropdown-menu class="component app-header__dropdown app-header__dropdown__account" title="Your Name" align-children="right" />
 </div>

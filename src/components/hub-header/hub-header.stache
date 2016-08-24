@@ -1,0 +1,10 @@
+<div class="hub-header__content">
+  <hub-name hubname="My Hub Name" class="component hub-header__name">My Hub Name</hub-name>
+  <bithub-tabs class="component hub-header__tabs"></bithub-tabs>
+
+
+    <div class="hub-header__add-content">
+      <span>Add/Edit Contents</span>
+    </div>
+
+</div>
