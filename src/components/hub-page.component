@@ -1,0 +1,23 @@
+<can-component tag="hub-page">
+  <style type="less">
+    display: block;
+
+    p { font-weight: bold; }
+  </style>
+  <template>
+    <hub-header></hub-header>
+    <moderate-page></moderate-page>
+    <publish-page></publish-page>
+    <analytics-page></analytics-page>
+
+  </template>
+  <script type="view-model">
+    import DefineMap from 'can-define/map/';
+
+    export default DefineMap.extend({
+      message: {
+        value: 'This is the hub-page component'
+      }
+    });
+  </script>
+</can-component>
