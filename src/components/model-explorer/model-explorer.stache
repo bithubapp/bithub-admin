@@ -52,7 +52,10 @@
                 </div>
             </div>
             {{/if}}
-			<textarea {$value}="paramsString" ($change)="updateProp('paramsString',@element.value)"></textarea>
+			<textarea
+				{$value}="paramsString"
+				($change)="updateProp('paramsString',%element.value)"
+			></textarea>
             <button type="button" class="btn btn-primary" can-click="submit">Submit</button>
             <label class="control-label">
 				<input
@@ -61,6 +64,14 @@
 					($click)="toggleProp('useFixtures')"
 					{$checked}="useFixtures" >
 				Fixtures
+			</label>
+            <label class="control-label">
+				<input
+					type="checkbox"
+					{$value}="clearLocalStorage"
+					($click)="toggleProp('clearLocalStorage')"
+					{$checked}="clearLocalStorage" >
+				Clear local storage before call
 			</label>
             {{#if selectedMethodOptions.useMethodInstance}}
             <label class="control-label">

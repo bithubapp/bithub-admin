@@ -243,6 +243,11 @@ export default DefineMap.extend({
         }
     },
 
+	clearLocalStorage: {
+		type: 'boolean',
+		value: false
+	},
+
     /**
      * @function clearResponse Clear Response
      * @description Clears the response field.
@@ -281,6 +286,11 @@ export default DefineMap.extend({
 
         if (method && Model && params) {
             vm.usageLog.push(`Calling... ${this.selectedModel}.${method}(${this.paramsString})`);
+
+			if (vm.clearLocalStorage && localStorage) {
+				vm.usageLog.push('Clearing local storage');
+				localStorage.clear();
+			}
             if (methodOpts.useMethodInstance) {
                 var instance = new Model(params.serialize());
                 //check validation, if any
