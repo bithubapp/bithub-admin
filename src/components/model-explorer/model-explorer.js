@@ -30,39 +30,37 @@
  * ```
  *
  */
-
-import $ from 'jquery';
 import Component from 'can-component';
-import template from './model-explorer.stache!';
-import ViewModel from './viewmodel';
 import fixture from 'can-fixture';
+import ViewModel from './viewmodel';
+import template from './model-explorer.stache!';
 
 export default Component.extend({
-    tag: 'model-explorer',
-    template,
-    ViewModel,
-    helpers: {
-        objectToString: function (obj, opts) {
-            var resp = obj();
-            return JSON.stringify(resp.serialize?resp.serialize():resp, null, 4);
-        }
-    },
-    events: {
+	tag: 'model-explorer',
+	template,
+	ViewModel,
+	helpers: {
+		objectToString: obj => {
+			const resp = obj();
+			return JSON.stringify(resp.serialize ? resp.serialize() : resp, null, 4);
+		}
+	},
+	events: {
 
-        /**
-         * @function events.inserted Inserted
-         * @description Bootstraps the useFixtures variable.
-         */
-        inserted: function () {
-            this.viewModel.useFixtures = fixture.on;
-        },
+		/**
+		* @function events.inserted Inserted
+		* @description Bootstraps the useFixtures variable.
+		*/
+		inserted: function () {
+			this.viewModel.useFixtures = fixture.on;
+		},
 
-        /**
-         * @function events.useFixtures Use Fixtures Change
-         * @description Updates fixtures setting when useFixtures is updated.
-         */
-        '{viewModel} useFixtures': function (ctx, opts, useFixtures) {
-            fixture.on = !!useFixtures;
-        }
-    }
+		/**
+		* @function events.useFixtures Use Fixtures Change
+		* @description Updates fixtures setting when useFixtures is updated.
+		*/
+		'{viewModel} useFixtures': (ctx, opts, useFixtures) => {
+			fixture.on = !!useFixtures;
+		}
+	}
 });
