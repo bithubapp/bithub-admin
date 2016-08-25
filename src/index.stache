@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <body>
-    <can-import from="bithub-admin/index.less!" />
+    <can-import from="bithub-admin/styles/index.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
     <can-import from="bithub-admin/plugins/attr-is" />
     <can-import from="bithub-admin/components/header/" />

@@ -1,3 +1,18 @@
+/**
+ * @module {can-component} Header
+ * @parent bithub-admin.components
+ *
+ * @signature '<app-header></app-header>'
+ * Import file then add tag to template. No parameters are required.
+ *
+ * @description Provides custom element that displays the application header
+ *
+ * @body
+ * this component displays the main application top bar that holds the main
+ * application navigation elements
+ *
+ */
+
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
 import template from './header.stache';
@@ -62,9 +77,10 @@ const dropdownConfigs = {
 };
 
 export const ViewModel = DefineMap.extend({
-  message: {
-    value: 'This is the bithub-header component'
-  },
+  /**
+   * @property {object} dropDownItems
+   * dropdown menus configuration object
+   */
   dropDownItems: {
     type: 'any',
     value: dropdownConfigs

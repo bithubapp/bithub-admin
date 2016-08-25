@@ -1,36 +1,33 @@
+/**
+ * @module {can-component} Dropdown menu
+ * @parent bithub-admin.components
+ * @signature '<bithub-dropdown-menu></bithub-dropdown-menu>'
+ * Import file then add tag to template.
+ *
+ * <bithub-dropdown-menu
+ *   items="{items}"
+ * >
+ * </bithub-dropdown-menu>
+ */
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
 import template from './dropdown-menu.stache';
-import $ from 'jquery';
 
 export const ViewModel = DefineMap.extend({
-  userMenu: {
+  title: {
+    type:'string'
+  },
+  visible: {
     type: 'boolean',
     value: 'false'
+  },
+  toggle: function () {
+    return this.visible ? this.visible = false : this.visible = true;
   }
 });
 
 export default Component.extend({
   tag: 'bithub-dropdown-menu',
   ViewModel: ViewModel,
-  template,
-  events: {
-    insterted: function(el,ev) {
-      var $el;
-      $el = $(this.element);
-
-      $el.closest('ul').hide();
-    },
-    ' mouseenter':function(el,ev) {
-      var $el;
-      $el = $(this.element);
-      $el.find('ul').show();
-    },
-    ' mouseleave':function(el,ev) {
-      var $el;
-      $el = $(this.element);
-      $el.find('ul').hide();
-    }
-
-  }
+  template
 });

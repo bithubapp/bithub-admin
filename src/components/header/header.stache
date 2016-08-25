@@ -4,10 +4,14 @@
 
 <div class="app-header__dropdowns">
     <can-import from="bithub-admin/components/dropdown-menu/" />
+
     <bithub-dropdown-menu class="app-header__dropdown" title="Organisation Name"
-     align-children="left" />
+     {items}="dropDownItems.organizations"/>
+
     <bithub-dropdown-menu class="app-header__dropdown" title="Your Hub Name"
-    align-children="left" />
-    <bithub-dropdown-menu class="component app-header__dropdown app-header__dropdown__account"
-     title="Your Name" align-children="right" user-menu="true" items="{dropDownItems.account}" />
+    {items}="dropDownItems.hubs"/>
+
+    <bithub-dropdown-menu
+      class="component app-header__dropdown app-header__dropdown__account"
+     title="Your Name" {items}="dropDownItems.account" />
 </div>
