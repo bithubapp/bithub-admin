@@ -1,5 +1,6 @@
 @import "colors.less";
 @import "dimensions.less";
+@import "social-icons.less";
 
 html {
 	height: 100%;
@@ -215,4 +216,143 @@ body {
 		height: 100%;
 		border: 0;
 	}
+}
+
+.add-content {
+	font-size: 12px;
+	position: absolute;
+	z-index: 100;
+	top: @app-header-height;
+	right: 0;
+	width: 340px;
+	padding: 15px;
+	height: 100%;
+	background-color: white;
+	box-shadow: -1px 0px 2px 0px rgba(0,0,0,0.3);
+	box-sizing: border-box;
+
+	.add-content__close {
+		margin-bottom: 10px;
+
+		> span {
+			vertical-align: middle;
+		}
+	}
+
+	.add-content__close::before {
+		font-family: 'FontAwesome';
+		font-size: @font-size-large;
+		content: '\f057\00A0';
+		color: @bh-red;
+		vertical-align: middle;
+		position:relative;
+		top: 1px;
+	}
+
+	.add-content__header {
+		color: white;
+		background-color: @bh-dark-gray;
+		padding: 2px 2px 2px 10px;
+
+		> .fa {
+			margin-left: 5px;
+		}
+	}
+
+	.add-content__networks {
+		display: flex;
+		flex-wrap: wrap;
+		border-width: 1px 0 0 1px;
+		margin-top: 10px;
+	}
+
+	.add-content__network, .add-content__networks {
+		border-style: solid;
+		border-color: @bh-medium-gray;
+	}
+
+	.add-content__network {
+		position: relative;
+		height: 50px;
+		width: 50px;
+		border-width: 0 1px 1px 0;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: @bh-medium-gray;
+	}
+
+	.add-content__network::before {
+		font-family: 'Socialicious';
+		font-size: 32px;
+		position: absolute;
+		line-height: 50px;
+		width: 50px;
+		text-align: center;
+	}
+
+	.add-content__network::after {
+		font-family: 'FontAwesome';
+		font-size: @font-size-small;
+		content: "\f055";
+		position: absolute;
+		bottom: 2px;
+		right: 2px;
+		color: @bh-blue;
+	}
+
+	.add-content__network--disqus::before {
+		content: @icon-disqus;
+	}
+	.add-content__network--foursquare::before {
+		content: @icon-foursquare;
+	}
+	.add-content__network--github::before {
+		content: @icon-github;
+	}
+	.add-content__network--meetup::before {
+		content: @icon-meetup;
+	}
+	.add-content__network--stackoverflow::before {
+		font-family: 'FontAwesome';
+		content: @icon-stackoverflow;
+	}
+	.add-content__network--flickr::before {
+		content: @icon-flickr;
+	}
+	.add-content__network--twitter::before {
+		content: @icon-twitter;
+	}
+	.add-content__network--facebook::before {
+		content: @icon-facebook;
+	}
+	.add-content__network--googleplus::before {
+		content: @icon-googleplus;
+	}
+	.add-content__network--pinterest::before {
+		content: @icon-pinterest;
+	}
+	.add-content__network--tumblr::before {
+		content: @icon-tumblr;
+	}
+	.add-content__network--instagram::before {
+		content: @icon-instagram;
+	}
+	.add-content__network--rss::before {
+		font-family: 'FontAwesome';
+		content: @icon-rss;
+	}
+	.add-content__network--youtube::before {
+		content: @icon-youtube;
+	}
+}
+
+.modal-backdrop {
+	position:absolute;
+	top: @app-header-height;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: rgba(0,0,0,.3);
 }
