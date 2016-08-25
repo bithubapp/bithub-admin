@@ -1,0 +1,120 @@
+/**
+ * @constructor {can-component} home-page Home Page
+ * @parent bithub-admin.pages
+ *
+ * @signature '<home-page></home-page>'
+ *
+ * Import file then add tag to template. No parameters are required.
+ *
+ * @body
+ * This temporary home page component just handles logging in and registering
+ * with the API/fixtures. It may be updated more later.
+ */
+<can-component tag="home-page">
+	<style type="less">
+		display: block;
+	</style>
+	<template>
+		<form>
+			{{#if message}}
+				<p>{{message}}</p>
+			{{/if}}
+			<input type="email" name="email" {($value)}="user.email">
+			<input type="password" name="password" {($value)}="user.password">
+		</form>
+		<button type="button" ($click)="register()">Register</button>
+		<button type="button" ($click)="login()">Login</button>
+	</template>
+	<script type="view-model">
+	    import DefineMap from 'can-define/map/';
+		import User from 'bithub-admin/models/user/';
+		import Session from 'bithub-admin/models/session/';
+
+	    export default DefineMap.extend({
+
+			/**
+			 * @property {string} message
+			 * An error message to display for form.
+			 */
+			message: 'string',
+
+			/**
+			 * @property {object} session
+			 * The current session object.
+			 */
+			session: {},
+
+			/**
+			 * @property {object} user
+			 * The current user object.
+			 */
+			user: {
+				Type: User,
+				Value: Object
+			},
+
+			/**
+			 * Clears the [home-page.message] value and sets an empty string.
+			 */
+			clearMessage: function () {
+				this.message = '';
+			},
+
+			/**
+			 * Simple validation checking of the form. This is really just to
+			 * prevent sending a request with empty props.
+			 * @return {boolean} Returns true only if both the email and password
+			 * fields have a value.
+			 */
+			validate: function () {
+				if (!this.user.email || !this.user.password) {
+					return false;
+				}
+				return true;
+			},
+
+			/**
+			 * Register the user, creates a user in the database. Will advise user
+			 * to login next once request complete's successfully.
+			 */
+			register: function () {
+				this.clearMessage();
+				if (this.validate()) {
+					this.user.save().then(resp => {
+						this.user = resp;
+						this.message = 'You are all registered! Try logging in! :)';
+					}, (err) => {
+						this.message = err;
+					});
+				} else {
+					this.message = 'Oops. The form is not complete!';
+				}
+			},
+
+			/**
+			 * Login the user, creates a new session then gets the actual user
+			 * object.  Will set error messages if any arise.
+			 */
+			login: function () {
+				this.clearMessage();
+				if (this.validate()) {
+					const user = this.user.serialize();
+					// Remove user id
+					user.id = undefined;
+					const newSession = new Session(user);
+					newSession.save().then(resp => {
+						this.session = resp;
+
+						User.get(this.user.serialize()).then(resp => {
+							this.user = resp;
+						});
+					}, (err) => {
+						this.message = err;
+					});
+				} else {
+					this.message = 'Oops. The form is not complete!';
+				}
+			}
+		});
+	</script>
+</can-component>
