@@ -11,7 +11,7 @@
 		{{#case 'analytics'}}
 			<analytics-page></analytics-page>
 		{{/case}}
-		{{default}}
+		{{#default}}
 			<moderate-page></moderate-page>
 		{{/default}}
 	{{/switch}}
