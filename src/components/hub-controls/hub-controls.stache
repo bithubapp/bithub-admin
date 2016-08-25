@@ -1,0 +1,6 @@
+<div>
+	<div tab-index="100" ($click)="updateParams('decision','inbox')">Inbox {{#if inboxCount}}({{inboxCount}}){{/if}}</div>
+	<div tab-index="110" ($click)="updateParams('decision','approved')">Approved {{#if approvedCount}}({{approvedCount}}){{/if}}</div>
+	<div tab-index="120" ($click)="updateParams('decision','starred')">Starred {{#if starredCount}}({{starredCount}}){{/if}}</div>
+	<div tab-index="130" ($click)="updateParams('decision','deleted')">Deleted {{#if deletedCount}}({{deletedCount}}){{/if}}</div>
+</div>

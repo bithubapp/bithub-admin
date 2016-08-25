@@ -6,8 +6,7 @@
     <can-import from="bithub-admin/styles.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
 	<can-import from="bithub-admin/components/home-page.component!" />
-    <can-import from="bithub-admin/components/hub-page.component" />
-	<can-import from="bit-tabs" />
+    <can-import from="bithub-admin/components/hub-page.component!" />
 
     <h1>Bithub</h1>
 

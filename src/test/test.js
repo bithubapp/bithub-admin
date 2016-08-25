@@ -10,3 +10,7 @@ import 'bithub-admin/components/hub-page/hub-page_test';
 import 'bithub-admin/components/hub-header/hub-header/hub-header_test';
 
 import 'bithub-admin/components/hub-header/hub-header_test';
+
+import 'bithub-admin/components/embed/embed_test';
+
+import 'bithub-admin/components/hub-controls/hub-controls_test';

@@ -18,8 +18,13 @@
   </template>
   <script type="view-model">
     import DefineMap from 'can-define/map/';
+	import 'bit-tabs';
+	import 'bithub-admin/components/moderate-page.component!';
+	import 'bithub-admin/components/publish-page.component!';
+	import 'bithub-admin/components/analytics-page.component!';
 
     export default DefineMap.extend({
+		activeTab: 'string'
     });
   </script>
 </can-component>

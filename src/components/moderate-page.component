@@ -1,0 +1,26 @@
+<can-component tag="moderate-page">
+	<style type="less">
+		display: block;
+	</style>
+	<template>
+		{{#if hasContent}}
+			<h2>Welcome to Bithub!</h2>
+			<p>Add content to your hub to get started!</p>
+		{{else}}
+			<hub-controls {(params)}="params"></hub-controls>
+			<bh-embed {params}="params"></bh-embed>
+		{{/if}}
+	</template>
+	<script type="view-model">
+		import DefineMap from 'can-define/map/';
+		import EmbedMap from 'bithub-admin/models/embed/embed-params-define';
+		import 'bithub-admin/components/embed/';
+		import 'bithub-admin/components/hub-controls/';
+		export default DefineMap.extend({
+			params: {
+				Type: EmbedMap,
+				Value: Object
+			}
+		});
+	</script>
+</can-component>
