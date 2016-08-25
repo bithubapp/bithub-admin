@@ -19,8 +19,22 @@
 			{{#if message}}
 				<p>{{message}}</p>
 			{{/if}}
-			<input type="email" name="email" {($value)}="user.email">
-			<input type="password" name="password" {($value)}="user.password">
+			<div>
+				<label>Email</label>
+				<input
+					type="email"
+					name="email"
+					{($value)}="user.email"
+					placeholder="E-mail">
+			</div>
+			<div>
+				<label>Password</label>
+				<input
+					type="password"
+					name="password"
+					{($value)}="user.password"
+					placeholder="super duper secret password">
+			</div>
 		</form>
 		<button type="button" ($click)="register()">Register</button>
 		<button type="button" ($click)="login()">Login</button>
