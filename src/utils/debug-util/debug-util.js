@@ -1,3 +1,4 @@
+/* global window */
 /**
  * @module {function} debug-util Debug Util
  * @parent bithub-admin.utils
@@ -10,7 +11,7 @@
  * Needed mostly to debug demos and other items. Will create a `can` object on
  * `window` which will have `fixture` and `viewModel`, as well as `$` (jQuery).
  */
-import $ from 'jquery'
+import $ from 'jquery';
 import fixture from 'can-fixture';
 import viewModel from 'can-view-model';
 
@@ -29,4 +30,4 @@ export default () => {
 			window.can = can;
 		}
 	}
-}
+};

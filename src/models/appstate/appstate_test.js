@@ -2,8 +2,14 @@ import 'steal-mocha';
 import chai from 'chai';
 import Appstate from './appstate';
 
-let assert = chai.assert;
+const assert = chai.assert;
+let appState;
 
-xdescribe('models/appstate', function() {
-
+xdescribe('models/appstate', () => {
+	beforeEach(() => {
+		appState = new Appstate({});
+	});
+	it('creates defaults', () => {
+		assert.equal(appState.page, '');
+	});
 });

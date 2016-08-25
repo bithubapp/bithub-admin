@@ -89,7 +89,7 @@
 
 			/**
 			 * Register the user, creates a user in the database. Will advise user
-			 * to login next once request complete's successfully.
+			 * to login next once request completes successfully.
 			 */
 			register: function () {
 				this.clearMessage();
@@ -106,7 +106,7 @@
 			},
 
 			/**
-			 * Login the user, creates a new session then gets the actual user
+			 * Login the user. Creates a new session then gets the actual user
 			 * object.  Will set error messages if any arise.
 			 */
 			login: function () {

@@ -1,6 +1,6 @@
 // import Organization from 'bithub-admin/models/organization';
 
-var models = {};
+const models = {};
 
 export default models;
 

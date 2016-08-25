@@ -1,12 +1,9 @@
-import $ from 'jquery';
-import DefineMap from 'can-define/map/map';
 import route from 'can-route';
 import 'can-route-pushstate';
-
-import fixture from 'bithub-admin/models/fixtures/';
 import AppViewModel from 'bithub-admin/models/appstate/';
-
 import debugUtils from 'bithub-admin/utils/debug-util/';
+
+import 'bithub-admin/models/fixtures/';
 // TODO Do not call this on production or with build.
 debugUtils();
 

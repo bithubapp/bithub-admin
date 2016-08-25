@@ -30,7 +30,7 @@ export const Appstate = DefineMap.extend({
 	/**
 	 * @property {string} action Action
 	 * The third part of the route; the action. An action that is affecting, or
-	 *  will, affect the slug.
+	 *  will affect, the slug.
 	 */
 	action: 'string',
 
@@ -42,7 +42,7 @@ export const Appstate = DefineMap.extend({
 
 	/**
 	 * @property {object} user User
-	 * THe user object, an instance of the [user] model.
+	 * The user object, an instance of the [user] model.
 	 */
 	user: {
 		Type: DefineMap,
@@ -51,7 +51,7 @@ export const Appstate = DefineMap.extend({
 
 	/**
 	 * @property {object} session Session
-	 * THe user object, an instance of the [session] model.
+	 * The session object, an instance of the [session] model.
 	 */
 	session: {
 		Type: DefineMap,

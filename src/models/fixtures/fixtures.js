@@ -1,5 +1,5 @@
 // Main file that loads all model fixtures
-import fixture from 'can-fixture';
+import 'can-fixture';
 
 import 'bithub-admin/models/fixtures/user';
 
