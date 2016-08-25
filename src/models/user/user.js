@@ -57,7 +57,7 @@ User.List = DefineList.extend({
 });
 
 export const userConnection = superMap({
-	url: '/api/api/users',
+	url: '/api/users',
 	idProp: 'id',
 	Map: User,
 	List: User.List,
