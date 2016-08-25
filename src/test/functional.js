@@ -3,13 +3,12 @@ import mocha from 'steal-mocha';
 
 F.attach(mocha);
 
-describe('bithub-admin functional smoke test', function(){
-  beforeEach(function(){
-    F.open('../development.html');
-  });
+describe('bithub-admin functional smoke test', () => {
+	beforeEach(() => {
+		F.open('../development.html');
+	});
 
-  it('bithub-admin main page shows up', function(){
-    F('title').text('bithub-admin', 'Title is set');
-  });
+	it('bithub-admin main page shows up', () => {
+		F('title').text('bithub-admin', 'Title is set');
+	});
 });
-

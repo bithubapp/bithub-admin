@@ -5,8 +5,15 @@
   <body>
     <can-import from="bithub-admin/styles.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
+	<can-import from="bithub-admin/components/home-page.component!" />
 
-    <h1>{{message}}</h1>
+    <h1>Bithub</h1>
+
+	{{#if session}}
+		You are logged in! Hooray!
+	{{else}}
+		<home-page {(user)}="user" {(session)}="session"></home-page>
+	{{/if}}
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}
