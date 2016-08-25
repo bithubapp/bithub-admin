@@ -6,11 +6,19 @@
     <can-import from="bithub-admin/styles.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
 	<can-import from="bithub-admin/components/home-page.component!" />
+	<can-import from="bit-tabs" />
 
     <h1>Bithub</h1>
 
 	{{#if session}}
-		You are logged in! Hooray!
+		<bit-tabs>
+			<bit-panel title="Tab 1">
+				Hello
+			</bit-panel>
+			<bit-panel title="Tab 2">
+				Goodbye
+			</bit-panel>
+		</bit-tabs>
 	{{else}}
 		<home-page {(user)}="user" {(session)}="session"></home-page>
 	{{/if}}
