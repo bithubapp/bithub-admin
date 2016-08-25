@@ -64,6 +64,10 @@ const dropdownConfigs = {
 export const ViewModel = DefineMap.extend({
   message: {
     value: 'This is the bithub-header component'
+  },
+  dropDownItems: {
+    type: 'any',
+    value: dropdownConfigs
   }
 });
 

@@ -1,1 +1,8 @@
 <span>{{title}}</span>
+{{#if items.length}}
+<ul>
+  {{#each items}}
+    <li>{{title}}</li>
+  {{/each}}
+</ul>
+{{/if}}
