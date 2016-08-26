@@ -284,9 +284,9 @@ body {
 	}
 
 	.add-content__network::before {
-		font-family: 'Socialicious';
+		// content & font set by 'icon-whatever' class on this element
 		font-size: 32px;
-		position: absolute;
+		display:inline-block;
 		line-height: 50px;
 		width: 50px;
 		text-align: center;
@@ -300,6 +300,44 @@ body {
 		bottom: 2px;
 		right: 2px;
 		color: @bh-blue;
+	}
+
+	.add-content__authorize {
+		padding: 10px;
+	}
+
+	.add-content__authorize-icon {
+		display: inline-block;
+		vertical-align: middle;
+		height: 30px;
+		width: 30px;
+		color: @bh-medium-gray;
+		border: 1px solid @bh-medium-gray
+	}
+
+	.add-content__authorize-icon::before {
+		display: inline-block;
+		line-height: 30px;
+		width: 30px;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.add-content__authorize-button {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 10px;
+		line-height: 30px;
+		background-color: @bh-blue;
+		color: white;
+		margin-left: 10px;
+	}
+
+	.add-content__authorize-cancel {
+		display: inline-block;
+		vertical-align: middle;
+		color: @bh-blue;
+		margin-left: 15px;
 	}
 }
 
