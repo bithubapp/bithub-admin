@@ -2,13 +2,21 @@
  * @module {can-component} Dropdown menu
  * @parent bithub-admin.components
  *
+ * @description Provides dropdown menu for the Bithub Admin application
+ *
  * @signature `<bithub-dropdown-menu {title}="title" {items}="items" />`
- * Import file then add tag to template.
+ *  Creates dropdown menu for Bithub Admin
+ *
+ * @param {can-define/map|Object}
  *
  * @body
+ * ## Component initialization
+ * ```html
+ *    `<bithub-dropdown-menu {title}="title" {items}="items"></bithub-dropdown-menu>`
+ * ```
  *
  * ## Example
- * @demo components/dropdown-menu.html
+ * @demo components/dropdown-menu/dropdown-menu.html
  *
  */
 import Component from 'can-component';
@@ -36,7 +44,7 @@ export const ViewModel = DefineMap.extend(
    */
   items:{
     type:'observable'
-  }
+  },
   /**
    * @function toggle
    * opens and closes the dropdown
