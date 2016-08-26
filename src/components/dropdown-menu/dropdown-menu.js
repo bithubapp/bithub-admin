@@ -50,8 +50,8 @@ export const ViewModel = DefineMap.extend(
    * opens and closes the dropdown
    */
   toggle: function () {
-    this.visible = !this.visible;
-  },
+	this.visible = !this.visible;
+  }
 });
 
 export default Component.extend({

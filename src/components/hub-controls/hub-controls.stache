@@ -1,13 +1,29 @@
-<div>
-	<div tab-index="100" ($click)="updateParams('decision','inbox')">Inbox {{#if inboxCount}}({{inboxCount}}){{/if}}</div>
-	<div tab-index="110" ($click)="updateParams('decision','approved')">Approved {{#if approvedCount}}({{approvedCount}}){{/if}}</div>
-	<div tab-index="120" ($click)="updateParams('decision','starred')">Starred {{#if starredCount}}({{starredCount}}){{/if}}</div>
-	<div tab-index="130" ($click)="updateParams('decision','deleted')">Deleted {{#if deletedCount}}({{deletedCount}}){{/if}}</div>
+<div class="hub-controls__tabs">
+	<div
+		class="hub-controls__tab {{#is params.decision 'inbox'}}hub-controls__tab--selected {{/is}}"
+		tab-index="100"
+		($click)="updateParams('decision','inbox')"
+	>Inbox {{#if inboxCount}}({{inboxCount}}){{/if}}</div>
+	<div
+		class="hub-controls__tab {{#is params.decision 'approved'}}hub-controls__tab--selected {{/is}}"
+		tab-index="110"
+		($click)="updateParams('decision','approved')"
+	>Approved {{#if approvedCount}}({{approvedCount}}){{/if}}</div>
+	<div
+		class="hub-controls__tab {{#is params.decision 'starred'}}hub-controls__tab--selected {{/is}}"
+		tab-index="120"
+		($click)="updateParams('decision','starred')"
+	>Starred {{#if starredCount}}({{starredCount}}){{/if}}</div>
+	<div
+		class="hub-controls__tab {{#is params.decision 'deleted'}}hub-controls__tab--selected {{/is}}"
+		tab-index="130"
+		($click)="updateParams('decision','deleted')"
+	>Deleted {{#if deletedCount}}({{deletedCount}}){{/if}}</div>
 </div>
 <div>
 	<moderation-settings></moderation-settings>
 </div>
-<div>
-	<div tab-index="150">Social Filter</div>
-	<div tab-index="160">Sort Filter</div>
+<div class="hub-controls__dropdowns">
+	<div class="hub-controls__dropdown" tab-index="150">Social Filter</div>
+	<div class="hub-controls__dropdown" tab-index="160">Sort Filter</div>
 </div>

@@ -1,10 +1,22 @@
 <div class="hub-header__content">
-  <hub-name hubname="My Hub Name" class="component hub-header__name">My Hub Name</hub-name>
-  <bithub-tabs class="component hub-header__tabs"></bithub-tabs>
-
+	<hub-name hubname="My Hub Name" class="component hub-header__name">My Hub Name</hub-name>
+	<div class="hub-header__tabs">
+		<div
+			class="hub-header__tab {{#is activeTab 'moderate'}}hub-header__tab--selected{{/is}}"
+			($click)="updateActiveTab('moderate')"
+		>Moderate</div>
+		<div
+			class="hub-header__tab {{#is activeTab 'publish'}}hub-header__tab--selected{{/is}}"
+			($click)="updateActiveTab('publish')"
+		>Publish</div>
+		<div
+			class="hub-header__tab {{#is activeTab 'analytics'}}hub-header__tab--selected{{/is}}"
+			($click)="updateActiveTab('analytics')"
+		>Analytics</div>
+	</div>
 
     <div class="hub-header__add-content">
-      <span>Add/Edit Contents</span>
+		<span>Add/Edit Contents</span>
     </div>
 
 </div>

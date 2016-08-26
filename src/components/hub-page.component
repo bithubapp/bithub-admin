@@ -3,7 +3,8 @@
     display: block;
   </style>
   <template>
-    <hub-header {(activeTab)}="activeTab"></hub-header>
+    <hub-header {(active-tab)}="activeTab"></hub-header>
+
 	{{#switch activeTab}}
 		{{#case 'publish'}}
 			<publish-page></publish-page>
@@ -25,7 +26,9 @@
 	import 'bithub-admin/components/analytics-page.component!';
 
     export default DefineMap.extend({
-		activeTab: 'string'
+		activeTab: {
+			value: 'moderate'
+		}
     });
   </script>
 </can-component>

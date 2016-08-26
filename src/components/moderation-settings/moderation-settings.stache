@@ -1,4 +1,4 @@
-<div ($click)="toggleForm()">Moderation Settings</div>
+<div class="hub-controls__moderation-settings" ($click)="toggleForm()">Moderation Settings</div>
 {{#if formVisible}}
 	<div class="panel">
 		<div class="close" ($click)="toggleForm('hide')">X</div>

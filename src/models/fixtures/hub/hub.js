@@ -19,7 +19,7 @@ const store = fixture.store([{
 }]);
 
 fixture({
-	'GET /api/hub?organization_id={orgId}': store.findAll,
+	'GET /api/hub': store.findAll, //?organization_id={orgId}
 	'GET /api/hub/{id}': store.findOne,
 	'POST /api/hub': store.create,
 	'PUT /api/hub/{id}': store.update,

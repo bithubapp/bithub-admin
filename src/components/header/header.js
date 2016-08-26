@@ -16,6 +16,7 @@
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
 import template from './header.stache';
+import 'bithub-admin/plugins/attr-is'
 
 const dropdownConfigs = {
   organizations: [{
@@ -33,11 +34,11 @@ const dropdownConfigs = {
     icon: '',
     seperator: false,
     action: function() {}
-  }, {
-    title: '',
-    icon: '',
-    seperator: true,
-    action: null
+  // }, {
+  //   title: '',
+  //   icon: '',
+  //   seperator: true,
+  //   action: null
   },{
     // this object is replaced
     // with the items that come
@@ -52,11 +53,11 @@ const dropdownConfigs = {
     // this object is replaced
     // with the items that come
     // from the organizations model
-  }, {
-    title: '',
-    icon: '',
-    seperator: true,
-    action: null
+  // }, {
+  //   title: '',
+  //   icon: '',
+  //   seperator: true,
+  //   action: null
   }, {
     title: 'Add a Hub',
     icon: '',
@@ -77,14 +78,15 @@ const dropdownConfigs = {
 };
 
 export const ViewModel = DefineMap.extend({
-  /**
-   * @property {object} dropDownItems
-   * dropdown menus configuration object
-   */
-  dropDownItems: {
-    type: 'any',
-    value: dropdownConfigs
-  }
+	/**
+	* @property {object} dropDownItems
+	* dropdown menus configuration object
+	*/
+	dropDownItems: {
+		type: 'any',
+		value: dropdownConfigs
+	},
+	hub: {}
 });
 
 export default Component.extend({

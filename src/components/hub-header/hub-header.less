@@ -28,10 +28,31 @@ hub-header, .hub-header {
 
 	.hub-header__tabs {
 		font-size: @font-size-large;
+		display: flex;
 	}
 	.hub-header__tab {
 		padding: 0 25px;
 		border-right: 1px solid @bh-light-gray;
+		cursor: pointer;
+		line-height: @hub-header-height;
+	}
+	.hub-header__tab--selected {
+		display: inline-block;
+		height: @hub-header-height;
+		background: @bh-blue;
+		color: white;
+		position:relative;
+	}
+	.hub-header__tab--selected::after {
+		color: @bh-blue;
+		position:absolute;
+		content: "▼";
+		// need to match, based on icon size
+		line-height:15px;
+		bottom:-15px;
+		left: 0;
+		right: 0;
+		text-align: center;
 	}
 	.hub-header__tab:last-child {
 		border-right: 0;
