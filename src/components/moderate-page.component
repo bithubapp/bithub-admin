@@ -4,11 +4,11 @@
 	</style>
 	<template>
 		{{#if hasContent}}
-			<h2>Welcome to Bithub!</h2>
-			<p>Add content to your hub to get started!</p>
-		{{else}}
 			<hub-controls {(params)}="params"></hub-controls>
 			<bh-embed {params}="params"></bh-embed>
+		{{else}}
+			<h2>Welcome to Bithub!</h2>
+			<p>Add content to your hub to get started!</p>
 		{{/if}}
 	</template>
 	<script type="view-model">
@@ -17,6 +17,7 @@
 		import 'bithub-admin/components/embed/';
 		import 'bithub-admin/components/hub-controls/';
 		export default DefineMap.extend({
+			hasContent: true,
 			params: {
 				Type: EmbedMap,
 				Value: Object

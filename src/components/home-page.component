@@ -37,7 +37,7 @@
 			</div>
 		</form>
 		<button type="button" ($click)="register()">Register</button>
-		<button type="button" ($click)="login()">Login</button>
+		<button type="submit" ($click)="login()">Login</button>
 	</template>
 	<script type="view-model">
 	    import DefineMap from 'can-define/map/';
@@ -116,11 +116,12 @@
 					// Remove user id
 					user.id = undefined;
 					const newSession = new Session(user);
-					newSession.save().then(resp => {
-						this.session = resp;
+					newSession.save().then(sessionResp => {
+						this.session = sessionResp;
 
-						User.get(this.user.serialize()).then(resp => {
-							this.user = resp;
+						User.get(this.user.serialize()).then(userResp => {
+							// TODO: Fixture doesn't return right stuff...
+							this.user = userResp.data[0];
 						});
 					}, (err) => {
 						this.message = err;

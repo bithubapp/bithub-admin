@@ -1,0 +1,14 @@
+<div ($click)="toggleForm()">Moderation Settings</div>
+{{#if formVisible}}
+	<div class="panel">
+		<div class="close" ($click)="toggleForm('hide')">X</div>
+		<div class="approval-filters">
+			<h3>Automatically approve items matching the following rules</h3>
+			<filter-rules></filter-rules>
+		</div>
+		<div class="delete-filters">
+			<h3>Automatically delete items matching the following rules</h3>
+			<filter-rules></filter-rules>
+		</div>
+	</div>
+{{/if}}

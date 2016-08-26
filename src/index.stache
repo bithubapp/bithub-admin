@@ -10,8 +10,13 @@
 
     <h1>Bithub</h1>
 
-	{{#if session}}
-		<hub-page></hub-page>
+	{{#if userLoggedIn}}
+    	<hub-model get-list="{orgId=user.organizations.0.id}">
+			{{#isPending}}<p>Loading</p>{{/isPending}}
+			{{#isResolved}}
+				<hub-page {(hub)}="."></hub-page>
+			{{/isResolved}}
+		</hub-model>
 	{{else}}
 		<home-page {(user)}="user" {(session)}="session"></home-page>
 	{{/if}}

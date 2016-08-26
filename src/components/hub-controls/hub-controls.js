@@ -1,5 +1,6 @@
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
+import 'bithub-admin/components/moderation-settings/';
 import './hub-controls.less';
 import template from './hub-controls.stache';
 

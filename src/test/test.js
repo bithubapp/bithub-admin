@@ -14,3 +14,5 @@ import 'bithub-admin/components/hub-header/hub-header_test';
 import 'bithub-admin/components/embed/embed_test';
 
 import 'bithub-admin/components/hub-controls/hub-controls_test';
+
+import 'bithub-admin/components/moderation-settings/moderation-settings_test';

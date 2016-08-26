@@ -49,7 +49,11 @@ export const User = DefineMap.extend({
 	 * @property {string} updated_at Updated At
 	 * When the user was last updated.
 	 */
-	updated_at: 'string'
+	updated_at: 'string',
+
+	organizations: {
+		Value: Array
+	}
 });
 
 User.List = DefineList.extend({
@@ -57,7 +61,12 @@ User.List = DefineList.extend({
 });
 
 export const userConnection = superMap({
-	url: '/api/api/users',
+	url: {
+		getData: 'GET /api/users?includes[]=organizations&where[email]={email}',
+		getList: 'GET /api/users',
+		createData: 'POST /api/users',
+		destroyData: 'DELETE /api/users'
+	},
 	idProp: 'id',
 	Map: User,
 	List: User.List,

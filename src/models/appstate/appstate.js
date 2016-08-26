@@ -56,6 +56,11 @@ export const Appstate = DefineMap.extend({
 	session: {
 		Type: DefineMap,
 		serialize: false
+	},
+	userLoggedIn: {
+		get: function () {
+			return !!(this.session && typeof this.user.id !== 'undefined');
+		}
 	}
 });
 

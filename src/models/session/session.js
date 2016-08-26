@@ -33,9 +33,9 @@ Session.List = DefineList.extend({
 
 export const sessionConnection = superMap({
 	url: {
-		getData: 'GET /api/api/session',
-		createData: 'POST /api/api/session',
-		destroyData: 'DELETE /api/api/session'
+		getData: 'GET /api/session',
+		createData: 'POST /api/session',
+		destroyData: 'DELETE /api/session'
 	},
 	idProp: 'id',
 	Map: Session,

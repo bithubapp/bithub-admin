@@ -4,3 +4,10 @@
 	<div tab-index="120" ($click)="updateParams('decision','starred')">Starred {{#if starredCount}}({{starredCount}}){{/if}}</div>
 	<div tab-index="130" ($click)="updateParams('decision','deleted')">Deleted {{#if deletedCount}}({{deletedCount}}){{/if}}</div>
 </div>
+<div>
+	<moderation-settings></moderation-settings>
+</div>
+<div>
+	<div tab-index="150">Social Filter</div>
+	<div tab-index="160">Sort Filter</div>
+</div>
