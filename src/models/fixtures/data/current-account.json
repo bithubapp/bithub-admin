@@ -1,0 +1,27 @@
+{
+  "id": 614,
+  "email": "mark@bitovi.com",
+  "name": null,
+  "organizations": [
+    {
+      "id": 69,
+      "name": "Taylored Wines"
+    },
+    {
+      "id": 129,
+      "name": "Wow Bao"
+    },
+    {
+      "id": 540,
+      "name": "Harness Digital Marketing"
+    },
+    {
+      "id": 35,
+      "name": "Bithub sales org"
+    },
+    {
+      "id": 630,
+      "name": "Mark Stahl"
+    }
+  ]
+}

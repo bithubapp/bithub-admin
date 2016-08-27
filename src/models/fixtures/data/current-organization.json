@@ -1,0 +1,38 @@
+{
+  "id": 540,
+  "name": "Harness Digital Marketing",
+  "accounts": [
+    {
+      "id": 513,
+      "email": "info@harnessdigitalmarketing.com",
+      "name": null
+    },
+    {
+      "id": 39,
+      "email": "mihael+bithub@bitovi.com",
+      "name": "Mihael Konjevic"
+    },
+    {
+      "id": 3,
+      "email": "neektza@gmail.com",
+      "name": "Nikica glavni"
+    },
+    {
+      "id": 238,
+      "email": "skyler@bitovi.com",
+      "name": "Skyler Taylor"
+    },
+    {
+      "id": 614,
+      "email": "mark@bitovi.com",
+      "name": null
+    }
+  ],
+  "invitations": [
+    {
+      "id": 4,
+      "email": "justin@bitovi.com",
+      "name": "Justin Meyer"
+    }
+  ]
+}

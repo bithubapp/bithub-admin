@@ -1,0 +1,81 @@
+<div class="row">
+    {{^Model}}
+    <div class="col-xs-12">
+        <div class="alert alert-inpage alert-info">
+            <div class="message">
+                Select a valid model to start exploring...
+            </div>
+        </div>
+    </div>
+    {{/Model}}
+    <div class="col-xs-5">
+		<label>Model
+		    <select class="col-xs-5 no-gutter" {($value)}="selectedModel">
+				{{#each modelOptions}}
+					<option {$value}="value" {{#is value selectedModel}}selected{{/is}}>{{label}}</option>
+				{{/each}}
+			</select>
+		</label>
+        {{#if Model}}
+            <div class="col-xs-5 col-xs-offset-1 no-gutter">
+                {{#if modelMethods.length}}
+					<label>Method
+					    <select class="col-xs-5 no-gutter" {($value)}="selectedMethod">
+							{{#each modelMethods}}
+								<option {$value}="value" {{#is value selectedMethod}}selected{{/is}}>{{label}}</option>
+							{{/each}}
+						</select>
+					</label>
+                {{/if}}
+            </div>
+            <label class="control-label">Params <small>(JSON)</small></label>
+            {{#if showErrors}}
+            <div class="alert alert-inpage alert-danger">
+                <div class="message">
+                    {{#errors.params}}
+                        {{.}}
+                    {{/errors.params}}
+                    {{#each errors.validation}}
+                        {{#each .}}
+                            <p>{{.}}</p>
+                        {{/each}}
+                    {{/each}}
+                    {{#if errors.validation.hasErrors}}
+                        <p>Validation errors,
+                        {{#if mustValidate}}
+                            <strong>method not called</strong>
+                        {{else}}
+                            method <strong>called</strong>
+                        {{/if}}
+                        .</p>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+			<textarea {$value}="paramsString" ($change)="updateProp('paramsString',@element.value)"></textarea>
+            <button type="button" class="btn btn-primary" can-click="submit">Submit</button>
+            <label class="control-label">
+				<input
+					type="checkbox"
+					{$value}="useFixtures"
+					($click)="toggleProp('useFixtures')"
+					{$checked}="useFixtures" >
+				Fixtures
+			</label>
+            {{#if selectedMethodOptions.useMethodInstance}}
+            <label class="control-label">
+				<input
+					type="checkbox"
+					{$value}="mustValidate"
+					($click)="toggleProp('mustValidate')"
+					{$checked}="mustValidate">
+				Must Validate
+			</label>
+            {{/if}}
+        {{/if}}
+    </div>
+    <div class="col-xs-6 col-xs-offset-1">
+        <button type="button" class="btn btn-link pull-right" can-click="clearResponse">Clear</button>
+        <textarea class="form-control response-container" disabled>{{objectToString response}}</textarea>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+{
+  "id": 528,
+  "name": "benevolent_foliage_3723",
+  "tenant_name": "benevolent_foliage_3723",
+  "identities": [
+    {
+      "id": 219,
+      "provider": "facebook",
+      "uid": "402714476593110",
+      "brand_id": 528,
+      "created_at_timestamp": 1447171332,
+      "name": "Tom Harness"
+    },
+    {
+      "id": 222,
+      "provider": "twitter",
+      "uid": "1209655969",
+      "brand_id": 528,
+      "created_at_timestamp": 1447171498,
+      "name": "HarnessDM"
+    },
+    {
+      "id": 223,
+      "provider": "google_oauth2",
+      "uid": "108192771246396963416",
+      "brand_id": 528,
+      "created_at_timestamp": 1447171533,
+      "name": "Harness Digital Marketing"
+    },
+    {
+      "id": 220,
+      "provider": "foursquare",
+      "uid": "1820651",
+      "brand_id": 528,
+      "created_at_timestamp": 1447171355,
+      "name": "Tom Harness"
+    },
+    {
+      "id": 221,
+      "provider": "instagram",
+      "uid": "1283955329",
+      "brand_id": 528,
+      "created_at_timestamp": 1447171382,
+      "name": "harnessdigitalmarketing"
+    }
+  ]
+}

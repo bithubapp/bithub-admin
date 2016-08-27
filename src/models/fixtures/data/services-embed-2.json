@@ -1,0 +1,75 @@
+[
+  {
+    "id": 13,
+    "feed_name": "facebook",
+    "type_name": "page",
+    "brand_identity_id": 219,
+    "approved_by_default": null,
+    "state": "loaded",
+    "entity_count": 589,
+    "config": {
+      "id": "184262829024",
+      "display_name": "Hospice of Southern Illinois, INC."
+    },
+    "error": null
+  },
+  {
+    "id": 16,
+    "feed_name": "instagram",
+    "type_name": "tag",
+    "brand_identity_id": 221,
+    "approved_by_default": null,
+    "state": "loaded",
+    "entity_count": 98,
+    "config": {
+      "tag": "BeBurgundy",
+      "display_name": "#BeBurgundy"
+    },
+    "error": {
+      "klass": "Fetchers::AuthError",
+      "message": "GET https:\/\/api.instagram.com\/v1\/tags\/BeBurgundy\/media\/recent.json?client_id=01f063b895ee4b5382f3cdeb7d893620&count=100: 400: The access_token provided is invalid."
+    }
+  },
+  {
+    "id": 12,
+    "feed_name": "twitter",
+    "type_name": "hashtag",
+    "brand_identity_id": 222,
+    "approved_by_default": null,
+    "state": "loaded",
+    "entity_count": 124,
+    "config": {
+      "hashtag": "BeBurgundy",
+      "display_name": "#BeBurgundy"
+    },
+    "error": null
+  },
+  {
+    "id": 26,
+    "feed_name": "twitter",
+    "type_name": "user_timeline",
+    "brand_identity_id": 222,
+    "approved_by_default": null,
+    "state": "loaded",
+    "entity_count": 458,
+    "config": {
+      "handle": "wwwhospiceorg",
+      "display_name": "@wwwhospiceorg"
+    },
+    "error": null
+  },
+  {
+    "id": 17,
+    "feed_name": "twitter",
+    "type_name": "followers",
+    "brand_identity_id": 222,
+    "approved_by_default": null,
+    "state": "loaded",
+    "entity_count": 334,
+    "config": {
+      "handle": "@wwwhospiceorg",
+      "display_name": "@@wwwhospiceorg"
+    },
+    "error": null
+  }
+]
