@@ -1,0 +1,35 @@
+<div class="add-content">
+    <!-- span required for vertical alignment -->
+    <div class="add-content__close"><span>Close</span></div>
+    <div class="add-content__header">
+        Add Content <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+    </div>
+    <div class="add-content__networks">
+	{{#each services}}
+		{{#if active}}
+			<div ($click)= "toggleNewService" class="add-content__network {{icon}}"></div>
+		{{/if}}
+	{{/each}}
+	</div>
+</div>
+
+<div>
+	{{#if currentService}}
+		{{currentService.feedName}}
+	{{/if}}
+</div>
+
+{{#if currentService.isNew}}
+	<bh-service-form service="{currentService}" state="{state}" services="{state.services}" class="bithub-form"></bh-service-form>
+{{/if}}
+
+{{#if state.services.isPending}}
+	<div class="pending-wrap">
+		<i class="fa fa-spin fa-circle-o-notch"></i> Authenticating ...
+	</div>
+{{else}}
+	{{#if state.services.length}}
+		<h2 class="subtitle-separator">Connected Content Feeds</h2>
+		<bh-services-list state="{state}" current-service="{currentService}" services="{state.services}"></bh-services-list>
+	{{/if}}
+{{/if}}

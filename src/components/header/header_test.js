@@ -1,13 +1,17 @@
+import $ from 'jquery';
 import 'steal-mocha';
 import chai from 'chai';
 import { ViewModel } from './header';
+import stache from 'can-stache';
 
-let assert = chai.assert;
+const assert = chai.assert;
 
 // ViewModel unit tests
 describe('bithub-admin/components/header', function(){
-  it('Has message', function(){
-    var vm = new ViewModel();
-    assert.equal(vm.attr('message'), 'This is the app-header component');
-  });
+	beforeEach(()=>{
+		$('#sandbox').html(stache('<app-header/>'));
+	});
+	it('renders', function(){
+		assert.equal($('app-header').length,1);
+	});
 });
