@@ -1,0 +1,32 @@
+//## generic dimensions
+.height-100 { height: 100%; }
+.width-100 { width: 100%; }
+
+@font-size-small: 9px;
+@font-size-normal: 14px;
+@font-size-large: 18px;
+
+
+//## block specific dimensions
+// app-header
+@app-header-height: 46px;
+
+// app-header__logo
+@logo-width: 100px;
+
+// hub-header
+@hub-header-height: 44px;
+@hub-width: ~"calc(100% - 200px)";
+
+// hub-control
+@hub-controls-height: 43px;
+@hub-controls-top-margin: 15px;
+@hub-controls-bottom-border: 2px;
+
+// hub-control__dropdown
+@hub-controls-dropdown-width: 100px;
+@hub-controls-dropdown-height: 15px;
+
+
+//## aggregate dimensions:
+@aggregate-header-height: @hub-controls-height + @hub-controls-bottom-border + @hub-header-height + @app-header-height + @hub-controls-top-margin;
