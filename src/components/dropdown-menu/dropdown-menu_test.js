@@ -1,12 +1,16 @@
 import 'steal-mocha';
 import chai from 'chai';
-import { ViewModel } from './header-menu';
+import { ViewModel } from './dropdown-menu';
+import stache from 'can-stache';
 
-let assert = chai.assert;
+const assert = chai.assert;
 
-describe('bithub-admin/components/header-menu', function(){
-  it('Has message', function(){
-    var vm = new ViewModel();
-    assert.equal(vm.attr('message'), 'This is the bithub-header-menu component');
-  });
+// ViewModel unit tests
+describe('bithub-admin/components/dropdown-menu', function(){
+	beforeEach(()=>{
+		$('#sandbox').html(stache('<dropdown-menu/>'));
+	});
+	it('renders', function(){
+		assert.equal($('dropdown-menu').length,1);
+	});
 });

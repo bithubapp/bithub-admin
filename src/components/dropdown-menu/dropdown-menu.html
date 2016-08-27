@@ -1,11 +1,10 @@
 <script type="text/stache" can-autorender id="demo">
   <can-import from="bithub-admin/components/dropdown-menu/" />
-  <bithub-dropdown-menu {items}="items" class="component" {title}="title" />
+  <dropdown-menu {items}="items" class="component" {title}="title" />
 </script>
 <script src="../../../node_modules/steal/steal.js" main="can-view-autorender">
   import DefineMap from "can-define/map/";
   import {can} from "bithub-admin/utils/debug-util/";
-  window.can = can;
 
     let items = [{
       title: 'Account Settings',
