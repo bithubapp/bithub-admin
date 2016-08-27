@@ -26,36 +26,32 @@ import template from './dropdown-menu.stache';
 export const ViewModel = DefineMap.extend(
   /** @prototype */
 {
-  /**
-   * @property
-   */
-  title: {
-    type:'string'
-  },
-  /**
-   * @property
-   */
-  visible: {
-    type: 'boolean',
-    value: 'false'
-  },
-  /**
-   * @property
-   */
-  items:{
-    type:'observable'
-  },
-  /**
-   * @function toggle
-   * opens and closes the dropdown
-   */
-  toggle: function () {
-	this.visible = !this.visible;
-  }
+	/**
+	* @property
+	*/
+	title: 'string',
+	/**
+	* @property
+	*/
+	visible: {
+		type: 'boolean',
+		value: 'false'
+	},
+	/**
+	* @property
+	*/
+	items:{},
+	/**
+	* @function toggle
+	* opens and closes the dropdown
+	*/
+	toggle: function () {
+		this.visible = !this.visible;
+	}
 });
 
 export default Component.extend({
-  tag: 'bithub-dropdown-menu',
-  ViewModel: ViewModel,
-  template
+	tag: 'bithub-dropdown-menu',
+	ViewModel,
+	template
 });

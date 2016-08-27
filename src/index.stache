@@ -1,35 +1,38 @@
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <script src="https://use.fontawesome.com/25ea35044f.js"></script>
-  </head>
-  <body>
-    <can-import from="bithub-admin/styles/index.less!" />
-    <can-import from="bithub-admin/app" export-as="viewModel" />
-	<can-import from="bithub-admin/components/header/" />
-	<can-import from="bithub-admin/components/home-page.component!" />
-    <can-import from="bithub-admin/components/hub-page.component!" />
-    <app-header class="component app-header" {hub}="hub"/>
+	<head>
+		<title>{{title}}</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<script src="https://use.fontawesome.com/25ea35044f.js"></script>
+	</head>
+	<body>
+		<can-import from="bithub-admin/styles/index.less!" />
+		<can-import from="bithub-admin/app" export-as="viewModel" />
+		<can-import from="bithub-admin/components/header/" />
+		<can-import from="bithub-admin/components/home-page.component!" />
+		<can-import from="bithub-admin/components/hub-page.component!" />
+		<app-header
+			class="component app-header"
+			{user}="user"
+			{(hub)}="hub"/>
 
-	{{#if userLoggedIn}}
-    	<hub-model get-list="{orgId=user.organizations.0.id}">
-			{{#isPending}}<p>Loading</p>{{/isPending}}
-			{{#isResolved}}
-				<hub-page {(hub)}="."></hub-page>
-			{{/isResolved}}
-		</hub-model>
-	{{else}}
-		<home-page {(user)}="user" {(session)}="session"></home-page>
-	{{/if}}
+		{{#if userLoggedIn}}
+			<hub-model get-list="{orgId=user.organizations.0.id}">
+				{{#isPending}}<p>Loading</p>{{/isPending}}
+				{{#isResolved}}
+					<hub-page {(hub)}="."></hub-page>
+				{{/isResolved}}
+			</hub-model>
+		{{else}}
+			<home-page {(user)}="user" {(session)}="session"></home-page>
+		{{/if}}
 
-  {{#switch env.NODE_ENV}}
-      {{#case "production"}}
-        <script src="{{joinBase 'node_modules/steal/steal.production.js'}}"  main="bithub-admin/index.stache!done-autorender"></script>
-      {{/case}}
-      {{#default}}
-        <script src="/node_modules/steal/steal.js"></script>
-      {{/default}}
-    {{/switch}}
-  </body>
+		{{#switch env.NODE_ENV}}
+			{{#case "production"}}
+			<script src="{{joinBase 'node_modules/steal/steal.production.js'}}"  main="bithub-admin/index.stache!done-autorender"></script>
+			{{/case}}
+			{{#default}}
+			<script src="/node_modules/steal/steal.js"></script>
+			{{/default}}
+		{{/switch}}
+	</body>
 </html>
