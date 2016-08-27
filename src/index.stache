@@ -1,21 +1,32 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
   <body>
-    <can-import from="bithub-admin/styles.less!" />
+    <can-import from="bithub-admin/styles/index.less!" />
     <can-import from="bithub-admin/app" export-as="viewModel" />
-	<can-import from="bithub-admin/components/home-page.component!" />
+    <can-import from="bithub-admin/components/header/" />
+  	<can-import from="bithub-admin/components/home-page.component!" />
+  	<can-import from="bit-tabs" />
 
+    <app-header class="component app-header"/>
     <h1>Bithub</h1>
 
-	{{#if session}}
-		You are logged in! Hooray!
-	{{else}}
-		<home-page {(user)}="user" {(session)}="session"></home-page>
-	{{/if}}
+    	{{#if session}}
+    		<bit-tabs>
+    			<bit-panel title="Tab 1">
+    				Hello
+    			</bit-panel>
+    			<bit-panel title="Tab 2">
+    				Goodbye
+    			</bit-panel>
+    		</bit-tabs>
+    	{{else}}
+    		<home-page {(user)}="user" {(session)}="session"></home-page>
+    	{{/if}}
 
-    {{#switch env.NODE_ENV}}
+  {{#switch env.NODE_ENV}}
       {{#case "production"}}
         <script src="{{joinBase 'node_modules/steal/steal.production.js'}}"  main="bithub-admin/index.stache!done-autorender"></script>
       {{/case}}
