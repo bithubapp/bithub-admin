@@ -15,7 +15,8 @@
     "push-to-git": "git push origin --tags",
     "release:patch": "npm run preflight && npm version patch && npm run push-to-git",
     "release:minor": "npm run preflight && npm version minor && npm run push-to-git",
-    "release:major": "npm run preflight && npm version major && npm run push-to-git"
+    "release:major": "npm run preflight && npm version major && npm run push-to-git",
+    "test:debug": "DEBUG=testee:* testee -b chrome src/test.html --reporter Spec"
   },
   "main": "bithub-social.js",
   "files": [
@@ -58,6 +59,7 @@
     "done-serve": "^0.3.0-pre.0",
     "generator-donejs": "^0.10.0-pre.0",
     "jquery": "~2.2.1",
+    "selectize": "^0.12.3",
     "steal": "^0.16.0",
     "steal-stache": "^3.0.0-pre.2",
     "validate.js": "^0.10.0"

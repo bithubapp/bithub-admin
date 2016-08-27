@@ -51,7 +51,7 @@ export const ViewModel = DefineMap.extend(
 });
 
 export default Component.extend({
-	tag: 'bithub-dropdown-menu',
-	ViewModel,
-	template
+  tag: 'dropdown-menu',
+  ViewModel,
+  template
 });

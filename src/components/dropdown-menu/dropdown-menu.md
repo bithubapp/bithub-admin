@@ -1,11 +1,10 @@
+@module {can.Component} bithub-admin/components/dropdown-menu Dropdown Menu
 @parent bithub-admin
-@module {can.Component} bithub-admin/components/dropdown-menu <bithub-dropdown-menu>
 
-A short description of the bithub-dropdown-menu component
+A short description of the dropdown-menu component
 
-@signature `<bithub-dropdown-menu>`
+@signature `<dropdown-menu>`
 
 @body
 
 ## Use
-
