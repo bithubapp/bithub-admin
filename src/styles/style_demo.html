@@ -29,7 +29,7 @@
         <span class="hub-header__name">My Hub Name</span >
 
         <div class="hub-header__tabs">
-            <span class="hub-header__tab">Moderate</span>
+            <span class="hub-header__tab hub-header__tab--selected">Moderate</span>
             <span class="hub-header__tab">Publish</span>
             <span class="hub-header__tab">Analytics</span>
         </div>
@@ -42,12 +42,83 @@
 </div>
 
 <div class="hub-controls">
+    <div class="hub-controls__tabs">
+        <div class="hub-controls__tab hub-controls__tab--selected">
+            <i class="fa fa-inbox" aria-hidden="true"></i> Inbox (42)
+        </div>
+        <div class="hub-controls__tab">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i> Approved (350)
+        </div>
+        <div class="hub-controls__tab">
+            <i class="fa fa-star" aria-hidden="true"></i> Starred (3)
+        </div>
+        <div class="hub-controls__tab">
+            Deleted
+        </div>
+    </div>
 
+    <div class="hub-controls__dropdowns">
+        <div class="hub-controls__dropdown">
+            View All Services
+        </div>
+        <div class="hub-controls__dropdown">
+            Newest To Oldest
+        </div>
+    </div>
+
+    <div class="hub-controls__moderation-settings">
+        <!-- span required for vertical alignment -->
+        <span>Moderation Settings</span>
+    </div>
 </div>
 
 <div class="hub-frame">
-
+    <iframe src="http://bithub.com/embed?hubId=1&tenant=benevolent_lagoon_489_19&decision=approved&view=public"></iframe>
 </div>
+
+<!-- sidebar showing all network icons -->
+<div class="add-content">
+    <!-- span required for vertical alignment -->
+    <div class="add-content__close"><span>Close</span></div>
+    <div class="add-content__header">
+        Add Content <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+    </div>
+    <div class="add-content__networks">
+        <div class="add-content__network icon-disqus"></div>
+        <div class="add-content__network icon-facebook"></div>
+        <div class="add-content__network icon-foursquare"></div>
+        <div class="add-content__network icon-github"></div>
+        <div class="add-content__network icon-instagram"></div>
+        <div class="add-content__network icon-meetup"></div>
+        <div class="add-content__network icon-rss"></div>
+        <div class="add-content__network icon-stackoverflow"></div>
+        <div class="add-content__network icon-tumblr"></div>
+        <div class="add-content__network icon-twitter"></div>
+        <div class="add-content__network icon-youtube"></div>
+    </div>
+</div>
+
+<!--&lt;!&ndash; sidebar showing approval link &ndash;&gt;-->
+<!--<div class="add-content">-->
+    <!--&lt;!&ndash; span required for vertical alignment &ndash;&gt;-->
+    <!--<div class="add-content__close"><span>Close</span></div>-->
+    <!--<div class="add-content__header">-->
+        <!--Add Content <i class="fa fa-question-circle-o" aria-hidden="true"></i>-->
+    <!--</div>-->
+    <!--<div class="add-content__authorize">-->
+        <!--<div class="add-content__authorize-icon">-->
+
+        <!--</div>-->
+        <!--<div class="add-content__authorize-button">-->
+
+        <!--</div>-->
+        <!--<div class="add-content__authorize-cancel">-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="modal-backdrop"></div>
 
 </body>
 </html>
