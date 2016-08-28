@@ -1,6 +1,6 @@
 import 'steal-mocha';
 import chai from 'chai';
-import Session from './session';
+import {Session} from './session';
 
 const assert = chai.assert;
 const user = {

@@ -15,7 +15,7 @@ const returnSession = () => {
 fixture({
 	'GET /api/api/session': returnSession,
 	'POST /api/api/session': returnSession,
- 	'DELETE /api/api/session': () => {
+	'DELETE /api/api/session': () => {
 		return {};
 	}
 });

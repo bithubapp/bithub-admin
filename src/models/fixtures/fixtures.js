@@ -7,4 +7,4 @@ import 'bithub-admin/models/fixtures/session';
 
 import 'bithub-admin/models/fixtures/service';
 
-import 'bithub-admin/models/fixtures/serviceConfig';
+import 'bithub-admin/models/fixtures/service-config';

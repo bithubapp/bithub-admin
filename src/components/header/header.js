@@ -30,7 +30,7 @@ export const ViewModel = DefineMap.extend({
 });
 
 export default Component.extend({
-  tag: 'app-header',
-  ViewModel: ViewModel,
-  template
+	tag: 'app-header',
+	ViewModel,
+	template
 });

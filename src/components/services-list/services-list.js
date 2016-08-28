@@ -1,10 +1,11 @@
+import $ from 'jquery';
 import Component from 'can-component';
 import DefineMap from 'can-define/map/';
 import './services-list.less';
 import template from './services-list.stache';
 
 export const ViewModel = DefineMap.extend({
-  deletingService: null,
+	deletingService: null,
 	init() {
 		this.attr({
 			shownErrors: [],
@@ -14,16 +15,16 @@ export const ViewModel = DefineMap.extend({
 	hideNoResults(service) {
 		this.hiddenNoResults.push(service);
 	},
-	destroyService(service, el, ev) {
+	destroyService(service) {
 		this.deletingService = service;
 	},
-	editService(service){
+	editService(service) {
 		this.currentService = service;
 	},
-	toggleErrorShowing(service){
+	toggleErrorShowing(service) {
 		const shownErrors = this.shownErrors;
 		const index = shownErrors.indexOf(service);
-		if(index > -1){
+		if (index > -1) {
 			shownErrors.splice(index, 1);
 		} else {
 			shownErrors.push(service);
@@ -32,42 +33,42 @@ export const ViewModel = DefineMap.extend({
 });
 
 export default Component.extend({
-	tag : 'bh-services-list',
+	tag: 'bh-services-list',
 	template,
 	ViewModel,
-	helpers : {
-		isCurrentService(service, opts){
+	helpers: {
+		isCurrentService(service, opts) {
 			let check;
 
-			service = can.isFunction(service) ? service() : service;
-			
+			service = $.isFunction(service) ? service() : service;
+
 			check = service === this.currentService;
 			check = check && !service.isNew();
 
 			return check ? opts.fn(opts.scope.add(service)) : opts.inverse(opts.scope.add(service));
 		},
-		isServiceCurrentlyLoading(service, opts){
+		isServiceCurrentlyLoading(service, opts) {
 			const currentlyLoading = this.state.loadingServices;
 
-			service = can.isFunction(service) ? service() : service;
-			
-			if(service.isLoading() || (currentlyLoading.indexOf(service) !== -1 && !service.error && !service.anoResults)){
+			service = $.isFunction(service) ? service() : service;
+
+			if (service.isLoading() || (currentlyLoading.indexOf(service) !== -1 && !service.error && !service.anoResults)) {
 				return opts.fn();
 			}
 		},
-		serviceHasNoResults(service, opts){
-			service = can.isFunction(service) ? service() : service;
-			this.hiddenNoResults.length;
-			if(service.noResults && this.hiddenNoResults.indexOf(service) === -1){
+		serviceHasNoResults(service, opts) {
+			service = $.isFunction(service) ? service() : service;
+
+			if (service.noResults && this.hiddenNoResults.indexOf(service) === -1) {
 				return opts.fn();
 			}
 		},
-		showErrorsForService(service, opts){
-			service = can.isFunction(service) ? service() : service;
-			this.shownErrors.length;
-			if(service.error && this.shownErrors.indexOf(service) !== -1){
+		showErrorsForService(service, opts) {
+			service = $.isFunction(service) ? service() : service;
+
+			if (service.error && this.shownErrors.indexOf(service) !== -1) {
 				return opts.fn();
 			}
 		}
-	},
+	}
 });
