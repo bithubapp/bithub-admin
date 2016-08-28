@@ -1,3 +1,4 @@
+/* eslint camelcase: ["error", {properties: "never"}] */
 /**
  * @constructor {DefineMap} user User
  * @parent bithub-admin.models

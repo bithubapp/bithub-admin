@@ -23,35 +23,37 @@ import Component from 'can-component';
 import DefineMap from 'can-define/map/';
 import template from './dropdown-menu.stache';
 
-export const ViewModel = DefineMap.extend(
-  /** @prototype */
-{
+export const ViewModel = DefineMap.extend({
+
 	/**
-	* @property
+	* @property {string} Text to render for the dropdown trigger.
 	*/
-	title: 'string',
+	buttonTitle: 'string',
+
 	/**
-	* @property
+	* @property {boolean} Whether dropdown options are visible.
 	*/
 	visible: {
 		type: 'boolean',
 		value: 'false'
 	},
+
 	/**
-	* @property
+	* @property {Object} Dropdown options
 	*/
-	items:{},
+	items: {},
+
 	/**
 	* @function toggle
-	* opens and closes the dropdown
+	* Opens and closes the dropdown
 	*/
-	toggle: function () {
+	toggle() {
 		this.visible = !this.visible;
 	}
 });
 
 export default Component.extend({
-  tag: 'dropdown-menu',
-  ViewModel,
-  template
+	tag: 'dropdown-menu',
+	ViewModel,
+	template
 });

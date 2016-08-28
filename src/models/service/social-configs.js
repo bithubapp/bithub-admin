@@ -1,54 +1,54 @@
 export const SocialConfigs = [
-	{ 	
-		name: 'Disqus', 
+	{
+		name: 'Disqus',
 		icon: 'icon-disqus',
 		active: true,
-		tags: [{ tagName: 'blah', template: '<>'}],
+		tags: [{tagName: 'blah', template: '<>'}]
 	}, {
-		name: 'Facebook', 
+		name: 'Facebook',
 		icon: 'icon-facebook',
-		active: true,
+		active: true
 	}, {
 		name: 'Foursquare',
 		icon: 'icon-foursquare',
-		active: true,
+		active: true
 	}, {
 		name: 'Github',
 		icon: 'icon-github',
-		active: true,
+		active: true
 	}, {
 		name: 'Instagram',
 		icon: 'icon-instagram',
-		active: true,
+		active: true
 	}, {
 		name: 'Meetup',
 		icon: 'icon-meetup',
-		active: true,
+		active: true
 	}, {
 		name: 'RSS',
 		icon: 'icon-rss',
-		active: true,
+		active: true
 	}, {
 		name: 'StackExchange',
 		icon: 'icon-stackexchange',
-		active: false,
+		active: false
 	}, {
 		name: 'StackOverflow',
 		icon: 'icon-stackoverflow',
-		active: true,
+		active: true
 	}, {
 		name: 'Tumblr',
 		icon: 'icon-tumblr',
-		active: true,
+		active: true
 	}, {
 		name: 'Twitter',
 		icon: 'icon-twitter',
-		active: true,
+		active: true
 	}, {
 		name: 'YouTube',
 		icon: 'icon-youtube',
-		active: true,
-	},
+		active: true
+	}
 ];
 
 export default SocialConfigs;

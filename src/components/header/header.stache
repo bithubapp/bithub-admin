@@ -7,16 +7,16 @@
 
     <bithub-dropdown-menu
 		class="app-header__dropdown"
-		title="Organization Name"
-		{items}="dropDownItems.organizations"/>
+		button-title="Organisation Name"
+    	{items}="dropDownItems.organizations"/>
 
     <bithub-dropdown-menu
 		class="app-header__dropdown"
-		title="Your Hub Name"
+		button-title="Your Hub Name"
     	{items}="dropDownItems.hubs"/>
 
     <bithub-dropdown-menu
-    	class="component app-header__dropdown app-header__dropdown__account"
-     	title="Your Name"
+     	class="component app-header__dropdown app-header__dropdown__account"
+    	button-title="Your Name"
 		{items}="dropDownItems.account" />
 </div>

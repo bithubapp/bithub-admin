@@ -1,12 +1,12 @@
 <div ($mouseenter)="toggle()" ($mouseleave)="toggle()">
-	<span>{{title}}</span>
-</div>
-{{#if visible}}
-	{{#if items.length}}
-		<ul>
-			{{#each items}}
-				<li>{{title}}</li>
-			{{/each}}
-		</ul>
+	<span>{{buttonTitle}}</span>
+	{{#if visible}}
+		{{#if items.length}}
+			<ul>
+				{{#each items}}
+					<li>{{title}}</li>
+				{{/each}}
+			</ul>
+		{{/if}}
 	{{/if}}
-{{/if}}
+</div>

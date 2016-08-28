@@ -1,14 +1,14 @@
 import 'steal-mocha';
 import chai from 'chai';
-import { ViewModel } from './services-list';
+import {ViewModel} from './services-list';
 
-let assert = chai.assert;
+const assert = chai.assert;
 
 // ViewModel unit tests
-describe('bithub-admin/components/services-list', function(){
-  xit('Has message', function(done){
-    var vm = new ViewModel();
-    assert.equal(vm.message, 'This is the components-services-list component');
-    done()
-  });
+describe('bithub-admin/components/services-list', () => {
+	xit('Has message', done => {
+		const vm = new ViewModel();
+		assert.equal(vm.message, 'This is the components-services-list component');
+		done();
+	});
 });
