@@ -1,6 +1,6 @@
 import 'steal-mocha';
 import chai from 'chai';
-import {ServiceConfig} from './serviceConfig';
+import {ServiceConfig} from './service-config';
 
 const assert = chai.assert;
 

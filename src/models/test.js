@@ -8,4 +8,4 @@ import 'bithub-admin/models/appstate/appstate_test';
 
 import 'bithub-admin/models/service/service_test';
 
-import 'bithub-admin/models/service/serviceConfig_test';
+import 'bithub-admin/models/service/service-config_test';

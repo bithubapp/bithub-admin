@@ -10,10 +10,10 @@ let vm;
 describe('bithub-admin/components/dropdown-menu', () => {
 	describe('view model', () => {
 		beforeEach(() => {
-			vm = new ViewModel();
+			vm = new ViewModel({});
 		});
 		it('sets props', () => {
-			assert.equals(vm.visible, false);
+			assert.equal(vm.visible, false);
 		});
 	});
 
