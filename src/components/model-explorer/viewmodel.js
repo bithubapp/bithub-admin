@@ -38,7 +38,7 @@ export default DefineMap.extend({
 	 * the select-input component can use to render a select control.
 	 */
 	modelOptions: {
-		get: function () {
+		get() {
 			const models = this.models;
 			const resp = [];
 			models.each((Model, key) => {
@@ -57,7 +57,7 @@ export default DefineMap.extend({
 	selectedModel: {
 		value: '',
 		type: 'string',
-		set: function (val) {
+		set(val) {
 			this.resetRequest();
 			return val;
 		}
@@ -68,7 +68,7 @@ export default DefineMap.extend({
 	 * @description The current active Model constructor. Returns false if no selection has been made.
 	 */
 	Model: {
-		get: function () {
+		get() {
 			const models = this.models;
 			const selectedModel = this.selectedModel;
 			return models[selectedModel] ? models[selectedModel].Model : false;
@@ -82,7 +82,7 @@ export default DefineMap.extend({
 	 * `{value:"{{VALUE}}", label:"{{LABEL}}"}`
 	 */
 	modelMethods: {
-		get: function () {
+		get() {
 			const selectedModel = this.selectedModel;
 			const models = this.models;
 			let resp = [];
@@ -100,7 +100,7 @@ export default DefineMap.extend({
 	 */
 	selectedMethodOptions: {
 		Value: Object,
-		set: function (val) {
+		set(val) {
 			if (val.defaultRequest) {
 				this.params = val.defaultRequest;
 			}
@@ -115,7 +115,7 @@ export default DefineMap.extend({
 	selectedMethod: {
 		value: '',
 		type: 'string',
-		set: function (val) {
+		set(val) {
 			this.resetRequest();
 			const selectedModel = this.selectedModel;
 			const models = this.models;
@@ -147,19 +147,19 @@ export default DefineMap.extend({
 	 * @description The JSON string that the user interacts with for the params.
 	 */
 	paramsString: {
-		set: function (val) {
+		set(val) {
 			if (typeof val === 'string') {
 				try {
 					val = JSON.parse(val);
 					this.resetRequest();
 					this.params = val;
 					return val;
-				} catch () {
+				} catch (err) {
 					this.errors.params = ['Invalid JSON'];
 				}
 			}
 		},
-		get: function () {
+		get() {
 			const params = this.params;
 			let val = JSON.stringify(params.serialize(), null, 4);
 
@@ -187,7 +187,7 @@ export default DefineMap.extend({
 	useFixtures: {
 		value: true,
 		type: 'boolean',
-		set: function (val) {
+		set(val) {
 			this.resetRequest();
 			return val;
 		}
@@ -207,13 +207,13 @@ export default DefineMap.extend({
 	 * errors exist
 	 */
 	showErrors: {
-		get: function () {
+		get() {
 			const errors = this.errors;
 			// check for validation errors
 			const validationErrors = errors.validation && errors.validation.hasErrors();
 
 			// check for params errors
-			return !!(validationErrors || errors.params);
+			return Boolean(validationErrors || errors.params);
 		}
 	},
 
@@ -224,7 +224,7 @@ export default DefineMap.extend({
 	mustValidate: {
 		value: true,
 		type: 'boolean',
-		set: function (val) {
+		set(val) {
 			this.resetRequest();
 			return val;
 		}
@@ -236,7 +236,7 @@ export default DefineMap.extend({
 	 * to work with fixtures.
 	 */
 	version: {
-		get: function () {
+		get() {
 			const params = this.params;
 			return params.version || '';
 		}
@@ -246,20 +246,20 @@ export default DefineMap.extend({
 	 * @function clearResponse Clear Response
 	 * @description Clears the response field.
 	 */
-	clearResponse: function () {
+	clearResponse() {
 		this.response = {};
 	},
 
-	resetRequest: function () {
+	resetRequest() {
 		this.errors = {};
 		this.response = {};
 		this.params = {};
 	},
-	toggleProp: function (propName) {
+	toggleProp(propName) {
 		const val = this[propName];
 		this.updateProp(propName, !val);
 	},
-	updateProp: function (propName, val) {
+	updateProp(propName, val) {
 		this[propName] = val;
 	},
 
@@ -267,7 +267,7 @@ export default DefineMap.extend({
 	 * @function submit Submit
 	 * @description Submits the params to the selected model and method.
 	 */
-	submit: function () {
+	submit() {
 		const method = this.selectedMethod;
 		const Model = this.Model;
 		const params = this.params;

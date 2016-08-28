@@ -1,17 +1,28 @@
 import $ from 'jquery';
 import 'steal-mocha';
 import chai from 'chai';
-import { ViewModel } from './header';
 import stache from 'can-stache';
+import {ViewModel} from './header';
 
 const assert = chai.assert;
+let vm;
 
-// ViewModel unit tests
-describe('bithub-admin/components/header', function(){
-	beforeEach(()=>{
-		$('#sandbox').html(stache('<app-header/>'));
+describe('bithub-admin/components/header', () => {
+	describe('view model', () => {
+		beforeEach(() => {
+			vm = new ViewModel();
+		});
+		it('sets props', () => {
+			assert.isObject(vm.organizations);
+		});
 	});
-	it('renders', function(){
-		assert.equal($('app-header').length,1);
+
+	describe('component', () => {
+		beforeEach(() => {
+			$('#sandbox').html(stache('<app-header/>'));
+		});
+		it('renders', () => {
+			assert.equal($('app-header').length, 1);
+		});
 	});
 });

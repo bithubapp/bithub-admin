@@ -1,15 +1,15 @@
 import 'steal-mocha';
 import chai from 'chai';
-import Service from './service';
+import {Service} from './service';
 
-let assert = chai.assert;
+const assert = chai.assert;
 
-describe('models/service', function() {
-  // it('getList', function(done){
-  //   Service.getList().then(function(items) {
-  //     assert.equal(items.length, 2);
-  //     assert.equal(items.attr('0.description'), 'First item');
-  //     done();
-  //   });
-  // });
+xdescribe('models/service', () => {
+	it('getList', done => {
+		Service.getList().then(items => {
+			assert.equal(items.length, 2);
+			assert.equal(items[0].description, 'First item');
+			done();
+		});
+	});
 });

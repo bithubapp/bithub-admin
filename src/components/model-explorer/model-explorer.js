@@ -51,7 +51,7 @@ export default Component.extend({
 		* @function events.inserted Inserted
 		* @description Bootstraps the useFixtures variable.
 		*/
-		inserted: function () {
+		inserted() {
 			this.viewModel.useFixtures = fixture.on;
 		},
 
@@ -60,7 +60,7 @@ export default Component.extend({
 		* @description Updates fixtures setting when useFixtures is updated.
 		*/
 		'{viewModel} useFixtures': (ctx, opts, useFixtures) => {
-			fixture.on = !!useFixtures;
+			fixture.on = useFixtures;
 		}
 	}
 });
