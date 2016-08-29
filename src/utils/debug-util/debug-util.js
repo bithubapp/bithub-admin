@@ -17,17 +17,26 @@ import viewModel from 'can-view-model';
 
 export const can = {};
 
+const defaultOpts = {
+	clearLocalStorage: true
+};
+
 // Add all the things
 can.$ = $;
 can.fixture = fixture;
 can.viewModel = viewModel;
 
-export default () => {
+export default (opts) => {
+	opts = $.extend({}, defaultOpts, opts || {});
+
 	// Not sure how SSR handles window, so added this just in case
 	if (window) {
 		// Make sure `can` is on window
 		if (!window.can) {
 			window.can = can;
+		}
+		if (window.localStorage && opts.clearLocalStorage) {
+			window.localStorage.clear();
 		}
 	}
 };

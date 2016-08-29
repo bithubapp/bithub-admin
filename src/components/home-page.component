@@ -120,8 +120,7 @@
 						this.session = sessionResp;
 
 						User.get(this.user.serialize()).then(userResp => {
-							// TODO: Fixture doesn't return right stuff...
-							this.user = userResp.data[0];
+							this.user = userResp;
 						});
 					}, (err) => {
 						this.message = err;

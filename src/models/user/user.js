@@ -24,7 +24,7 @@ import DefineList from 'can-define/list/';
 import superMap from 'can-connect/can/super-map/';
 import tag from 'can-connect/can/tag/';
 
-export const User = DefineMap.extend({
+const User = DefineMap.extend({
 	seal: false
 }, {
 
@@ -52,6 +52,10 @@ export const User = DefineMap.extend({
 	 */
 	updated_at: 'string',
 
+	/**
+	 * @property {string} organizations Organizations
+	 * A list of organization objects that user belongs to.
+	 */
 	organizations: {
 		Value: Array
 	}
@@ -63,8 +67,8 @@ User.List = DefineList.extend({
 
 export const userConnection = superMap({
 	url: {
+		getListData: 'GET /api/users',
 		getData: 'GET /api/users?includes[]=organizations&where[email]={email}',
-		getList: 'GET /api/users',
 		createData: 'POST /api/users',
 		destroyData: 'DELETE /api/users'
 	},

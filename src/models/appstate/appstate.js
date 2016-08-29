@@ -11,6 +11,7 @@
  * manage high level application state.
  */
 import DefineMap from 'can-define/map/';
+import User from 'bithub-admin/models/user/';
 
 export const Appstate = DefineMap.extend({
 
@@ -45,8 +46,9 @@ export const Appstate = DefineMap.extend({
 	 * The user object, an instance of the [user] model.
 	 */
 	user: {
-		Type: DefineMap,
-		serialize: false
+		serialize: false,
+		Type: User,
+		Value: Object
 	},
 
 	/**
@@ -57,6 +59,12 @@ export const Appstate = DefineMap.extend({
 		Type: DefineMap,
 		serialize: false
 	},
+
+	/**
+	 * @property {object} userLoggedIn User Logged In
+	 * Helper to see if user is logged in, which means there is session and the
+	 * user object was retrieved. 
+	 */
 	userLoggedIn: {
 		get: function () {
 			return !!(this.session && typeof this.user.id !== 'undefined');

@@ -298,9 +298,10 @@ export default DefineMap.extend({
 			Chain.then(resp => {
 				this.usageLog.push('Call completed successfully.');
 				this.response = resp;
-			}, function (err) {
+			}, err => {
 				this.usageLog.push('Call failed! Use browser dev tools to debug.');
-				this.response = err;
+				this.usageLog.push(err);
+				this.usageLog.push(Chain);
 			});
 		} else {
 			this.usageLog.push('Oops. Missing method/Model and/or params.');
