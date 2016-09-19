@@ -7,8 +7,8 @@
   "scripts": {
     "test": "testee src/test.html --browsers firefox --reporter Spec",
     "lint": "xo",
-    "start": "done-serve --proxy https://develop.bithub.com --port 8080",
-    "develop": "done-serve --proxy https://develop.bithub.com/ --develop --port 8080",
+    "start": "done-serve --proxy https://develop.bithub.com/api --port 8080",
+    "develop": "done-serve --proxy https://develop.bithub.com/api --develop --port 8080",
     "document": "documentjs",
     "build": "node bin/build",
     "preflight": "npm run lint && npm test && npm run build",
@@ -43,7 +43,7 @@
   "dependencies": {
     "bit-tabs": "^0.3.0-pre.0",
     "can-component": "^3.0.0-pre.8",
-    "can-connect": "^0.6.0-pre.4",
+    "can-connect": "git@github.com:canjs/can-connect.git#cd09ffa8a0bbe14f381e41f5b4706d0c85072bf5",
     "can-define": "^0.7.4",
     "can-route": "^3.0.0-pre.5",
     "can-route-pushstate": "^3.0.0-pre.3",
